@@ -1,3 +1,6 @@
+                        /***************\
+                        *      V 9      *
+                        \***************/
 /**************************************************************************************************\
 - Hotbar script macro. Select a token and execute. Goes through all weapons and shields and equips main and off-hand.
 - Changes action cost of off hand weapon, as well as damage mods to 5e rules. 
