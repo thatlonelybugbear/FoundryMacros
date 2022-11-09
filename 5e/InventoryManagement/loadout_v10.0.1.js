@@ -59,7 +59,7 @@ let weaponsSecondary;
 let tokenName = actor.token?.name || actor.getActiveTokens()[0].name
 let title
 let d
-const mainDialog = new Promise((resolve, reject) => {
+const mainDialog = await new Promise((resolve, reject) => {
     d = new Dialog({
         title: `Weapon Loadout for ${tokenName}`,
         content,
