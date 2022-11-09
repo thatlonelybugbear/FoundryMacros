@@ -542,7 +542,8 @@ async function getSecondaryDialogContent(mainWeapon,content,damageOptions,second
         else {
             weaponsSecondary = actor.itemTypes.weapon.filter(i => !i.getRollData().item.properties.two)   //check to ensure no two handed weapon is in secondaries
         }
-        if (mainWeapon.getRollData().item.quantity <=1) weaponsSecondary=weaponsSecondary.filter(i=>i.name !== mainWeapon.name)
+        //if (mainWeapon.getRollData().item.quantity <=1) weaponsSecondary=weaponsSecondary.filter(i=>i.name !== mainWeapon.name)
+        if (mainWeapon.getRollData().item.quantity <=1) weaponsSecondary=weaponsSecondary.filter(i=>i.id !== mainWeapon.id)
         if (!!shieldItems.length) {   //if there are shields on the inventory, put them in the secondary available
             for (let shieldItem of shieldItems) {
                 weaponsSecondary = weaponsSecondary.concat(shieldItem)
