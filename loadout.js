@@ -1,3 +1,7 @@
+/**************************************************************************************************\
+- Hotbar script macro. Select a token and execute. Goes through all weapons and equips main and off-hand.
+- Checks if the following items are on the token: Dual Wielder, Sharpshooter, "Fighting Style: Dueling", "Fighting Style: Two-Weapon Fighting".
+\**************************************************************************************************/
 let dualWielderFeatName = "" //You can put here the name of the Dual Wielder feat you use wrapped in"". If empty the macro will try to check for feature names on the actor.
 
 let actor = token?.actor ?? game.user.character;
