@@ -1,5 +1,5 @@
-/***************\
-                        *      V 9      *
+                        /***************\
+                        *      V 10     *
                         \***************/
 /**************************************************************************************************\
 - Hotbar script macro. Select a token and execute. Goes through all weapons and shields and equips main and off-hand.
