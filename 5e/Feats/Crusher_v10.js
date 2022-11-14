@@ -20,6 +20,13 @@ flags.midi-qol.onUseMacroName | Custom | Crusher123,postActiveEffects
 \******************************************************************/
 
           //Actual macro\\
+/*You are practiced in the art of crushing your enemies, granting you the following benefits:
+Increase your Strength or Constitution by 1, to a maximum of 20.
+
+Once per turn, when you hit a creature with an attack that deals bludgeoning damage, you can move it 5 feet to an unoccupied space, provided the target is no more than one size larger than you.
+
+When you score a critical hit that deals bludgeoning damage to a creature, attack rolls against that creature are made with advantage until the start of your next turn.*/
+
 if (args[0].hitTargets < 1) return;
 if (args[0].damageDetail.filter(i=>i.type === "bludgeoning").length < 1) return{};
 
@@ -89,22 +96,22 @@ async function applyTargetMove(time) {
 	let ray;
 	const checkDistance = async (crosshairs) => {
 		while (crosshairs.inFlight) {
-	       await warpgate.wait(100);
-	       ray = new Ray(targetCenter, crosshairs);
-           distance = canvas.grid.measureDistances([{ ray }], { gridSpaces: true })[0]
-           if(canvas.grid.isNeighbor(ray.A.x/canvas.grid.w,ray.A.y/canvas.grid.w,ray.B.x/canvas.grid.w,ray.B.y/canvas.grid.w) === false || canvas.scene.tokens.filter(i=>i.object.center.x===ray.B.x).filter(t=>t.object.center.y===ray.B.y).length > 0) {
+	       	await warpgate.wait(100);
+	       	ray = new Ray(targetCenter, crosshairs);
+           	distance = canvas.grid.measureDistances([{ ray }], { gridSpaces: true })[0]
+           	if(canvas.grid.isNeighbor(ray.A.x/canvas.grid.w,ray.A.y/canvas.grid.w,ray.B.x/canvas.grid.w,ray.B.y/canvas.grid.w) === false || canvas.scene.tokens.some(i=>i.object.center.x===ray.B.x && i.object.center.y===ray.B.y)) {
                 crosshairs.icon = 'icons/svg/hazard.svg'
-            } 
+			} 
             else {
                 crosshairs.icon = targetDoc.texture.src
             }
             crosshairs.draw()
             crosshairs.label = `${distance}/${maxRange} ft`
-	   }
+	   	}
     }
 	const callbacks = {
             show: checkDistance
-        }
+	}
     let {x,y,cancelled} = await warpgate.crosshairs.show({ size: targetDoc.width, icon: targetDoc.texture.src, label: '0 ft.', interval: -1 }, callbacks);
     if (distance > 5) {
         ui.notifications.error(`${name} has a maximum range of ${maxRange} ft. Pick another position`)
