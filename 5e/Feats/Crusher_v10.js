@@ -118,12 +118,12 @@ async function applyTargetMove(time) {
         return cancelled;
     }
     if(canvas.scene.tokens.some(tok=>tok.object.center.x===ray.B.x && tok.object.center.y===ray.B.y)) {
-        ui.notifications.error(`Cannot move the ${targetDoc.name} on top of another token`)
+        ui.notifications.error(`Cannot move the ${targetDoc.name} on top of another token`);
         return cancelled;
     }
     if(cancelled) return;
     const newCenter = canvas.grid.getSnappedPosition(x - targetToken.w / 2, y - targetToken.h / 2, 1);
     const mutationData = { token: {x: newCenter.x, y: newCenter.y}};
-    await warpgate.mutate(targetDoc, mutationData, {}, {permanent: true})
+    await warpgate.mutate(targetDoc, mutationData, {}, {permanent: true});
 	if(game.combat) await actor.setFlag('world', 'CrusherUsed', `${time}`);
 }
