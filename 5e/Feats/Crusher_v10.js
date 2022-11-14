@@ -72,8 +72,8 @@ async function applyTargetGAdvantageEffect() {
 	    label: "Crusher feat - Grant Advantage on all attacks",
 	    flags: {dae: {specialDuration: ['turnStartSource']}},
     }
-    if (tactor.effects.find(i=>i.data.label==="Crusher feat - Grant Advantage on all attacks")) {
-        let effect = tactor.effects.find(i=>i.data.label==="Crusher feat - Grant Advantage on all attacks");
+    if (tactor.effects.find(i=>i.label==="Crusher feat - Grant Advantage on all attacks")) {
+        let effect = tactor.effects.find(i=>i.label==="Crusher feat - Grant Advantage on all attacks");
         await MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: args[0].hitTargetUuids[0], effects: [effect.id] });
     }
     await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: args[0].hitTargetUuids[0], effects: [effect_sourceData] });
