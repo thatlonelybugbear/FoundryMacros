@@ -421,7 +421,7 @@ async function changeWeapons(weaponM,weaponS) {  //@to-do: thrown weapons. If we
             newActivationTypeS.type = 'bonus'
             if(!twoWeaponFighter) {
                 let newDamage = weaponS.getRollData().item.damage;
-                newDamage.parts[0][0] = newDamage.parts[0][0].replace('@mod','')
+                newDamage.parts[0][0] = newDamage.parts[0][0].replace('@mod','')    //@to-do: If ability mod is negative it should be added though! hmmm...
                 updateS = {  '_id': weaponS.id, 'name': `(off-hand) ${weaponS.name}`, 'flags.world': secondaryFlag, 'system.damage':newDamage, 'system.activation':newActivationTypeS, 'system.equipped':true }
             }
             else {
