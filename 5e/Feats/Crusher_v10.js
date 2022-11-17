@@ -103,11 +103,13 @@ async function applyTargetMove(time) {
 	}
     let distanceCheck = await warpgate.crosshairs.show({ size: targetDoc.width, icon: targetDoc.texture.src, label: '0 ft.', interval: -1 }, callbacks);
 
-    while (canvas.scene.tokens.some(tok=>tok.object.center.x===ray.B.x && tok.object.center.y===ray.B.y || distance > 5)) {
+    while (canvas.scene.tokens.some(tok=>tok !== targetToken && tok.object.center.x===ray.B.x && tok.object.center.y===ray.B.y || distance > 5)) {
         ui.notifications.warn(`Crusher Feat: Cannot move ${targetDoc.name} on top of another token or further than 5ft away`);
         distanceCheck = await warpgate.crosshairs.show({ size: targetDoc.width, icon: targetDoc.texture.src, label: '0 ft.', interval: -1 }, callbacks);
+	let {cancelled} = distanceCheck;
+	if (cancelled) return;
     }
-	const {x,y,cancelled} = distanceCheck;
+    const {x,y,cancelled} = distanceCheck;
     if(cancelled) return;
     const newCenter = canvas.grid.getSnappedPosition(x - targetToken.w / 2, y - targetToken.h / 2, 1);
     const mutationData = { token: {x: newCenter.x, y: newCenter.y}};
