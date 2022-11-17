@@ -1,0 +1,3708 @@
+{
+  "configSettings": {
+    "gmAutoAttack": true,
+    "gmAutoFastForwardAttack": true,
+    "gmAutoDamage": "onHit",
+    "gmAutoFastForwardDamage": true,
+    "showItemDetails": "cardOnly",
+    "itemTypeList": [
+      "weapon",
+      "equipment",
+      "consumable",
+      "tool",
+      "loot",
+      "class",
+      "spell",
+      "feat",
+      "backpack"
+    ],
+    "autoRollAttack": true,
+    "autoFastForward": "all",
+    "autoTarget": "dfwalledTemplates",
+    "autoCheckHit": "all",
+    "autoCheckSaves": "all",
+    "hideRollDetails": "detailsDSN",
+    "displaySaveDC": true,
+    "checkSaveText": true,
+    "autoRollDamage": "onHit",
+    "autoApplyDamage": "noCard",
+    "damageImmunities": "immunityPhysical",
+    "autoItemEffects": "applyNoButton",
+    "rangeTarget": "wallsBlockIgnoreDefeated",
+    "playerRollSaves": "chat",
+    "playerSaveTimeout": 40,
+    "rollNPCSaves": "auto",
+    "preRollChecks": false,
+    "mergeCard": true,
+    "mergeCardCondensed": true,
+    "hideNPCNames": "",
+    "useTokenNames": true,
+    "fullAuto": false,
+    "allowUseMacro": true,
+    "rollOtherDamage": "activation",
+    "removeButtons": "all",
+    "gmRemoveButtons": "all",
+    "concentrationAutomation": true,
+    "singleConcentrationRoll": true,
+    "optionalRules": {
+      "invisAdvantage": true,
+      "checkRange": true,
+      "wallsBlockRange": "center",
+      "coverCalculation": "none",
+      "nearbyFoe": 5,
+      "nearbyAllyRanged": 0,
+      "incapacitated": true,
+      "removeHiddenInvis": true,
+      "maxDRValue": true,
+      "distanceIncludesHeight": true,
+      "criticalSaves": true,
+      "activeDefence": false,
+      "challengeModeArmor": false,
+      "challengeModeArmorScale": false,
+      "checkFlanking": "ceflankedNoconga",
+      "optionalCritRule": -1,
+      "actionSpecialDurationImmediate": false,
+      "enableddbGL": false,
+      "enforceReactions": "all",
+      "recordAOO": "all"
+    },
+    "optionalRulesEnabled": true,
+    "defaultSaveMult": 0.5,
+    "keepRollStats": false,
+    "saveStatsEvery": 20,
+    "playerStatsOnly": false,
+    "removeConcentration": true,
+    "usePlayerPortrait": false,
+    "doReactions": "allMI",
+    "gmDoReactions": "allMI",
+    "reactionTimeout": 15,
+    "requiresTargets": "combat",
+    "showReactionAttackRoll": "d20",
+    "autoCEEffects": "both",
+    "rollOtherSpellDamage": "activation",
+    "promptDamageRoll": false,
+    "gmHide3dDice": false,
+    "ghostRolls": true,
+    "gmFastForwardSpells": false,
+    "fastForwardSpells": false,
+    "accelKeysOverride": false,
+    "enableddbGL": false,
+    "showReactionChatMessage": true,
+    "rollNPCLinkedSaves": "auto",
+    "gmConsumeResource": "none",
+    "consumeResource": "none",
+    "gmLateTargeting": "none",
+    "lateTargeting": "none",
+    "addWounded": 50,
+    "addDead": "overlay",
+    "convenientEffectsReaction": "Reaction",
+    "fixStickyKeys": true,
+    "autoFailSavesFriendly": false,
+    "worldKeyMappings": false,
+    "toggleOptionalRules": false,
+    "fumbleSound": "sounds/dice.wav",
+    "criticalSound": "sounds/dice.wav",
+    "diceSound": "sounds/dice.wav",
+    "displaySaveAdvantage": true,
+    "recordAOO": "all",
+    "enforceReactions": "all",
+    "enforceBonusActions": "all",
+    "playerDamageCard": "none",
+    "playerCardDamageDifferent": false,
+    "displayHitResultNumeric": false,
+    "rollAlternate": "formulaadv",
+    "allowActorUseMacro": true,
+    "keyMapping": {
+      "DND5E.Advantage": "altKey",
+      "DND5E.Disadvantage": "ctrlKey",
+      "DND5E.Critical": "altKey",
+      "DND5E.Versatile": "shiftKey"
+    },
+    "paranoidGM": false,
+    "tempHPDamageConcentrationCheck": true,
+    "showFastForward": true,
+    "requireMagical": "nonspell",
+    "itemRollStartWorkflow": false,
+    "ignoreSpellReactionRestriction": false,
+    "damageResistanceMultiplier": 0.5,
+    "damageVulnerabilityMultiplier": 2,
+    "hidePlayerDamageCard": true,
+    "attackPerTarget": true,
+    "autoRemoveTemplate": true,
+    "quickSettings": true,
+    "useCustomSounds": false,
+    "damageImmunityMultiplier": 0,
+    "skillAbilityCheckAdvantage": true,
+    "removeConcentrationEffects": "effectsTemplates"
+  },
+  "midiSoundSettings": {
+    "any": {},
+    "version": "0.9.48"
+  },
+  "itemRollButtons": true,
+  "criticalDamage": "default",
+  "itemDeleteCheck": true,
+  "nsaFlag": false,
+  "coloredBorders": "borderNamesText",
+  "addChatDamageButtons": "none",
+  "autoFastForwardAbilityRolls": true,
+  "autoRemoveTargets": "all",
+  "forceHideRoll": true,
+  "enableWorkflow": true,
+  "dragDropTargeting": true,
+  "flags": {
+    "exportSource": {
+      "system": "dnd5e",
+      "coreVersion": "10.290",
+      "systemVersion": "2.0.3"
+    },
+    "modules": {
+      "abouttimeVersion": "10.0.1",
+      "daeVersion": "10.0.13",
+      "DSNversion": "4.6.5",
+      "itemMacroVersion": "1.8.0",
+      "midiQolVersion": "10.0.21",
+      "monksVersion": "10.3",
+      "socketlibVersion": "1.0.12",
+      "simpleCalendarVersion": "2.1.58",
+      "timesUpVersion": "10.0.2"
+    },
+    "all-modules": [
+      {
+        "title": "About Time",
+        "description": "",
+        "url": "https://gitlab.com/tposney/about-time",
+        "version": "10.0.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/about-time/about-time.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Ace Library",
+        "description": "A library module for using the Ace code editor in Foundry VTT.",
+        "url": "https://github.com/arcanistzed/acelib",
+        "version": "1.8.3",
+        "compatibility": {
+          "minimum": "0.7.9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/acelib/scripts/library/ace.js",
+          "modules/acelib/scripts/library/ext-beautify.js",
+          "modules/acelib/scripts/library/ext-elastic_tabstops_lite.js",
+          "modules/acelib/scripts/library/ext-keybinding_menu.js",
+          "modules/acelib/scripts/library/ext-language_tools.js"
+        ],
+        "esmodules": [
+          "modules/acelib/scripts/settings.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Active-Auras",
+        "description": "Active-Auras",
+        "url": "https://github.com/kandashi/Active-Auras",
+        "version": "v0.5.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/ActiveAuras/src/aura.js",
+          "modules/ActiveAuras/src/AAhelpers.js",
+          "modules/ActiveAuras/src/AAhooks.js",
+          "modules/ActiveAuras/src/AAhtml.js",
+          "modules/ActiveAuras/src/collateAuras.js",
+          "modules/ActiveAuras/src/measureDistances.js",
+          "modules/ActiveAuras/src/settings.js",
+          "modules/ActiveAuras/src/templateDetection.js"
+        ],
+        "esmodules": [],
+        "socket": true
+      },
+      {
+        "title": "Actor Link Indicator",
+        "description": "Adds an easy to observe, toggle button in Actor titles to quickly switch and recognize token link modes",
+        "url": "https://github.com/saif-ellafi/foundryvtt-actor-link-indicator.git",
+        "version": "0.1.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.284",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/actor-link-indicator/actor-link-indicator.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Actually Private Rolls",
+        "description": "Enforces privacy for rolls by hiding the messages, eliminating new message notifications, and silencing the roll sound of private rolls.",
+        "url": "https://gitlab.com/koboldworks/agnostic/private-rolls",
+        "version": "1.1.1.1",
+        "compatibility": {
+          "minimum": "0.8.8",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/actually-private-rolls/private-rolls.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Adequate Vision",
+        "description": "Serviceable vision management for dnd5e",
+        "url": "https://github.com/stwlam/adequate-vision",
+        "version": "0.1.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.3",
+                "verified": "2.0.3"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/adequate-vision/script.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Advanced Macros",
+        "description": "Use handlebars templating, recursive macro calls and call macros with arguments or directly from chat.",
+        "url": "https://github.com/League-of-Foundry-Developers/fvtt-advanced-macros",
+        "version": "v1.18.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/advanced-macros/libs/tokenizer.min.js"
+        ],
+        "esmodules": [
+          "modules/advanced-macros/Macros.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Always HP",
+        "description": "We're always updating HP, add a window to make it easier to adjust that",
+        "url": "https://github.com/ironmonk88/always-hp",
+        "version": "10.3",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/always-hp/alwayshp.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Arbron’s Context Menu Library",
+        "description": "Library to facilitate adding and modifying Foundry's context menus.",
+        "url": "https://github.com/arbron/fvtt-context-menu-library",
+        "version": "0.3.2",
+        "compatibility": {
+          "minimum": "0.7.9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/arbron-context-menus/scripts/main.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Arbron’s Improved HP Bar",
+        "description": "Modifies the HP bar in various systems to represent the complexities of character health.",
+        "url": "https://github.com/arbron/fvtt-hp-bar",
+        "version": "2.2.4",
+        "compatibility": {
+          "minimum": "0.7.9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "archmage",
+              "type": "system",
+              "manifest": "https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/raw/master/system.json",
+              "compatibility": {
+                "verified": "1.20"
+              }
+            },
+            {
+              "id": "demonlord",
+              "type": "system",
+              "manifest": "https://github.com/Xacus/demonlord/releases/latest/download/system.json",
+              "compatibility": {
+                "verified": "2.0.3"
+              }
+            },
+            {
+              "id": "D35E",
+              "type": "system",
+              "manifest": "https://www.legaciesofthedragon.com/D35E/system.json",
+              "compatibility": {
+                "verified": "0.99"
+              }
+            },
+            {
+              "id": "dnd4e",
+              "type": "system",
+              "manifest": "https://raw.githubusercontent.com/EndlesNights/dnd4eBeta/main/system.json",
+              "compatibility": {
+                "verified": "0.3.2"
+              }
+            },
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+              "compatibility": {
+                "verified": "2.0"
+              }
+            },
+            {
+              "id": "pf1",
+              "type": "system",
+              "manifest": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/raw/master/system.json",
+              "compatibility": {
+                "verified": "0.81"
+              }
+            },
+            {
+              "id": "pf2e",
+              "type": "system",
+              "manifest": "https://github.com/foundryvtt/pf2e/releases/download/latest/system.json",
+              "compatibility": {
+                "verified": "3.12"
+              }
+            },
+            {
+              "id": "ptu",
+              "type": "system",
+              "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/releases/latest/download/system.json",
+              "compatibility": {
+                "verified": "2.1"
+              }
+            },
+            {
+              "id": "tormenta20",
+              "type": "system",
+              "manifest": "https://gitlab.com/vizael/Tormenta20/-/raw/master/system.json",
+              "compatibility": {
+                "verified": "1.3"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/arbron-hp-bar/scripts/main.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Arbron’s Summoning",
+        "description": "Easy to use interface for configuring and summoning actors within DnD5e.",
+        "url": "https://github.com/arbron/fvtt-summoner",
+        "version": "1.0.5",
+        "compatibility": {
+          "minimum": "10.274",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+              "compatibility": {
+                "minimum": "2.0.0",
+                "verified": "2.0"
+              }
+            }
+          ],
+          "requires": [
+            {
+              "id": "warpgate",
+              "type": "module",
+              "manifest": "https://github.com/trioderegion/warpgate/releases/latest/download/module.json",
+              "compatibility": {
+                "minimum": "1.14.!0"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/arbron-summoner/summoner.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Active Token Effects",
+        "description": "Active Token Effects",
+        "url": "https://github.com/MrPrimate/Active-Token-Lighting",
+        "version": "v0.4.03",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/ATL/src/activeLighting.js",
+          "modules/ATL/src/updateManager.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Automated Animations",
+        "description": "This will automatically run most JB2A Animations such as Melee/Ranged Attacks, Spell Attacks, and Instant Spells",
+        "url": "https://github.com/otigon/automated-jb2a-animations",
+        "version": "4.0.21",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "sequencer",
+              "type": "module",
+              "manifest": "https://github.com/fantasycalendar/FoundryVTT-Sequencer/releases/latest/download/module.json",
+              "compatibility": {}
+            },
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/autoanimations/index.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Autocomplete Inline Properties",
+        "description": "Add inline property autocompletion for fields that can use inline properties or otherwise reference document data.",
+        "url": "https://github.com/ghost-fvtt/FVTT-Autocomplete-Inline-Properties",
+        "version": "2.9.0",
+        "compatibility": {
+          "minimum": "0.8.5",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/autocomplete-inline-properties/aip.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Automated Evocations - Companion Manager",
+        "description": "A user interface to manage companions with summoning animations and automated summoning for spells",
+        "url": "https://github.com/theripper93/automated-evocations",
+        "version": "1.8.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "sequencer",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "warpgate",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/automated-evocations/scripts/main.js",
+          "modules/automated-evocations/scripts/config.js",
+          "modules/automated-evocations/scripts/companionmanager.js",
+          "modules/automated-evocations/scripts/autoevocations/dnd5e.js",
+          "modules/automated-evocations/scripts/autoevocations/pf2e.js",
+          "modules/automated-evocations/scripts/autoevocations/automatedevocations.js",
+          "modules/automated-evocations/scripts/custombindings.js"
+        ],
+        "esmodules": [],
+        "socket": true
+      },
+      {
+        "title": "Auto-Rotate",
+        "description": "Allows tokens to automatically rotate based on movement, targeting, etc.",
+        "url": "https://github.com/Varriount/fvtt-autorotate",
+        "version": "v1.3.9",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/autorotate/autorotate.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Build-a-Bonus",
+        "description": "Make it easier to manage very particular and niche bonuses and auras, on actors, items, effects, and templates.",
+        "url": "https://github.com/krbz999/babonus",
+        "version": "10.2.0.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.290",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+              "compatibility": {}
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/babonus/setup.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Button Feel",
+        "description": "Gives buttons and links an extra bit of feedback when clicked, plus a few other pedantic CSS tweaks.",
+        "url": "https://github.com/LebombJames/button-feel",
+        "version": "v1.1.1",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10.285"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Cleaner sheet title bar",
+        "description": "This module remove text from actions in cluttered sheet title bar. Text still available on mouse hover. Work with all systems and all modules!",
+        "url": "https://github.com/MiahNelah/cleaner-sheet-title-bar",
+        "version": "1.4.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.283"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/cleaner-sheet-title-bar/module/src/cleaner-sheet-title-bar.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "lib - Color Settings",
+        "description": "Library that allows modules to add color settings and forms.",
+        "url": "https://github.com/ardittristan/VTTColorSettings",
+        "version": "2.9.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/colorsettings/colorSetting.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Combat Enhancements",
+        "description": "Adds health tracking and drag/drop re-ordering to the combat tracker.",
+        "url": "https://gitlab.com/asacolips-projects/foundry-mods/combat-enhancements",
+        "version": "1.2.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.273",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/combat-enhancements/module/combat-enhancements.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Compendium Browser",
+        "description": "<p>Easily browse and filter spells, feats, items, and npcs loaded from compendia!</p><p>Verified with Foundry 9 and 10 only</p><strong>Compendium Browser is faster and better-behaved;</strong> it no longer loads all the compendia into memory on start-up (which sometimes hung servers because of memory or CPU requirements). Instead, it filters and loads on-demand, as well as giving you a Module Setting to control how many rows are loaded at a time.<br />Changes in 0.7.0: Supports Foundry 0.8+ only; faster searches using Foundry 0.8 queries!",
+        "url": "https://github.com/League-of-Foundry-Developers/compendium-browser",
+        "version": "0.8.2",
+        "compatibility": {
+          "minimum": "0.9.266",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {}
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/compendium-browser/compendium-browser.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Compendium Folders",
+        "description": "Collapsable folders for compendiums",
+        "url": "https://github.com/earlSt1/vtt-compendium-folders",
+        "version": "2.5.5",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/compendium-folders/compendium-folders.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Compendium Permissions",
+        "description": "Adds per player permission control to the Compendium Sidebar.",
+        "url": "https://gitlab.com/geekswordsman/compendium-permissions",
+        "version": "1.0.0",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/compendium-permissions/module/main.mjs"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Arbron’s Compendium Tools",
+        "description": "Tools to make updating compendium packs and modules to hold those packs easier.",
+        "url": "https://github.com/arbron/fvtt-compendium-tools",
+        "version": "0.5.0",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "arbron-context-menus",
+              "type": "module",
+              "manifest": "https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/raw/master/system.json",
+              "compatibility": {
+                "minimum": "0.2.0",
+                "verified": "0.3"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/compendium-tools/compendium-tools.mjs"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Combat Tracker Effect Tooltips",
+        "description": "This simple module adds tooltips to the effect icons shown on combatants in the combat tracker.",
+        "url": "https://github.com/dor-fvtt-released-modules/combat-tracker-effect-tooltips",
+        "version": "3.0.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/ct-effect-tooltips/scripts/ct-effect-tooltips.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Dynamic effects using Active Effects",
+        "description": "replacement for dynamic effects",
+        "url": "https://gitlab.com/tposney/dae",
+        "version": "10.0.13",
+        "compatibility": {
+          "minimum": "10.279",
+          "verified": "10.286",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/dae/libs/tokenizer.min.js"
+        ],
+        "esmodules": [
+          "modules/dae/dae.js",
+          "modules/dae/module/patching.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "D&D Beyond Importer",
+        "description": "Import your dndbeyond.com characters, spells, items, monsters, encounters, and adventures!",
+        "url": "https://github.com/mrprimate/ddb-importer",
+        "version": "3.1.26",
+        "compatibility": {
+          "minimum": "10.282",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "verified": "2.0.1"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/ddb-importer/vendor/jszip/jszip.min.js"
+        ],
+        "esmodules": [
+          "modules/ddb-importer/dist/main.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Default Button Visibility",
+        "description": "Just make default buttons easier to notice.",
+        "url": "https://github.com/Akaito/default-button-visibility-fvtt",
+        "version": "10.273.1",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "DF Architect",
+        "description": "Architect for FoundryVTT provides a major overhaul of the Walls and Lighting features, as well as a few extra fun things like the Colour Picker and Alternate Grid Snap.",
+        "url": "https://github.com/flamewave000/dragonflagon-arch",
+        "version": "4.0.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.286"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {
+                "verified": "1.12.10.0"
+              }
+            },
+            {
+              "id": "colorsettings",
+              "type": "module",
+              "compatibility": {
+                "verified": "2.9.0"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/df-architect/src/df-architect.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "DF Flags Editor",
+        "description": "Foundry Document Flags Editor",
+        "url": "https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-flag-edit",
+        "version": "1.2.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/df-flag-edit/src/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "DF Quality of Life",
+        "description": "A set of various small Quality of Life changes that don't quite fit in my other larger modules.",
+        "url": "https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-qol",
+        "version": "1.8.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {
+                "verified": "1.12.10.0"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/df-qol/src/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "DF Scene Enhancement",
+        "description": "A few enhancements to scene management for players and GMs.",
+        "url": "https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-scene-enhance",
+        "version": "3.6.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {
+                "verified": "1.12.10.0"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/df-scene-enhance/src/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "DFreds Chat Pins",
+        "description": "A FoundryVTT module that allows pinning messages to the chat.",
+        "url": "https://github.com/DFreds/dfreds-chat-pins",
+        "version": "2.0.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.286",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/dfreds-chat-pins/scripts/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "DFreds Convenient Effects",
+        "description": "Adds easy to use toggleable active effects for common use cases",
+        "url": "https://github.com/DFreds/dfreds-convenient-effects",
+        "version": "3.0.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.290",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {}
+            }
+          ],
+          "requires": [
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/dfreds-convenient-effects/scripts/main.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Dice Tray",
+        "description": "Adds a dice tray below chat, and turns the d20 near chat into a dice calculator.",
+        "url": "https://gitlab.com/asacolips-projects/foundry-mods/foundry-vtt-dice-calculator",
+        "version": "1.5.2",
+        "compatibility": {
+          "minimum": "0.7.5",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/dice-calculator/scripts/js.cookie.js",
+          "modules/dice-calculator/scripts/dice-calculator.js",
+          "modules/dice-calculator/scripts/dice-tray.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Dice So Nice!",
+        "description": "Adds customizable 3D dice to Foundry VTT with lots of options to fit your playstyle.",
+        "url": "https://gitlab.com/riccisi/foundryvtt-dice-so-nice",
+        "version": "4.6.5",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/dice-so-nice/libs/cannon.min.js",
+          "modules/dice-so-nice/libs/select2.min.js"
+        ],
+        "esmodules": [
+          "modules/dice-so-nice/main.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Dice Tooltip - DnD5e",
+        "description": "Shows a tooltip in actor sheets when hovering on Items/Spells/etc, with dice and bonus information. Useful for those that want to use physical dice or those that want a quick lookup of the rolls to be made.<br /><br />This version builds on the original version by Steffan Poulsen and fixes compatibility with Foundry 0.8 and up",
+        "url": "https://github.com/trev33b/dice-tooltip2",
+        "version": "2.4.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.1"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/dice-tooltip/scripts/dicetooltip.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Disable Mouse Wheel Control for Sliders",
+        "description": "Adds a client-side setting that disables mouse wheel control of sliders and input fields.",
+        "url": "https://github.com/mrkwnzl/disable-mouse-wheel-sliders-foundryvtt",
+        "version": "1.2.5",
+        "compatibility": {
+          "minimum": "0.8.5",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/disable-mouse-wheel-sliders/disable-mouse-wheel-sliders.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Door Macro",
+        "description": "",
+        "url": "https://github.com/krbz999/doormacro",
+        "version": "10.0.1.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/doormacro/setup.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Drag Ruler",
+        "description": "When dragging a token displays a ruler showing how far you've moved that token.",
+        "url": "https://github.com/manuelVo/foundryvtt-drag-ruler",
+        "version": "1.13.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "socketlib",
+              "type": "module",
+              "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/drag-ruler/src/libwrapper_shim.js",
+          "modules/drag-ruler/src/main.js",
+          "modules/drag-ruler/src/socket.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Drop Effects on Items",
+        "description": "A module which allows effects to be dragged and dropped to and from Item Sheets.",
+        "url": "https://github.com/ElfFriend-DnD/foundryvtt-drop-effects-on-items",
+        "version": "2.0.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.0",
+                "maximum": "2.0.9999"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/drop-effects-on-items/scripts/drop-effects-on-items.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Effect Macro",
+        "description": "",
+        "url": "https://github.com/krbz999/effectmacro",
+        "version": "10.0.7",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/effectmacro/setup.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Forgotten Adventures Battlemaps",
+        "description": "<p>This Module contains battlemaps from Forgotten Adventures, fully integrated for use with Foundry VTT. Featuring extra capabilities using Monk's Active Tile Triggers and Tagger for truly dynamic scenes!</p><p>You can support the creation of our battlemaps on <a href=\"https://www.patreon.com/FA_Battlemaps\">Patreon!</a> </p><p>A gallery of our work can be found on the <a href=\"https://www.forgotten-adventures.net/battlemaps\">website</a>.</p><p> Join our <a href=\"https://discord.gg/6KSJz6p\">Discord server</a> for any further questions.</p>",
+        "url": "https://www.forgotten-adventures.net/",
+        "version": "1.0.10",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "tagger",
+              "type": "module",
+              "manifest": "https://github.com/fantasycalendar/FoundryVTT-Tagger/releases/latest/download/module.json",
+              "compatibility": {}
+            },
+            {
+              "id": "monks-active-tiles",
+              "type": "module",
+              "manifest": "https://github.com/ironmonk88/monks-active-tiles/releases/latest/download/module.json",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/fa-battlemaps/scripts/shim.js",
+          "modules/fa-battlemaps/scripts/fa-battlemaps.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Find the culprit",
+        "description": "This module helps you to find a module causing issues, by automating the process of deactivating and reactivating modules.<br />Just click the 'Find the culprit' button inside Module Management.",
+        "url": "https://github.com/Moerill/fvtt-find-the-culprit",
+        "version": "1.4.6",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/find-the-culprit/js/find-the-culprit.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "FoundryVTT Arms Reach",
+        "description": "Allows the GM to limit the distance that a player can interacted with a placeable object like door, journal, stairway, token, ecc..",
+        "url": "https://github.com/p4535992/foundryvtt-arms-reach",
+        "version": "2.2.12",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json",
+              "compatibility": {}
+            },
+            {
+              "id": "socketlib",
+              "type": "module",
+              "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/develop/module.json",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/foundryvtt-arms-reach/foundryvtt-arms-reach.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Simple Calendar",
+        "description": "A simple calendar module for keeping track of game days and events.",
+        "url": "https://github.com/vigoren/foundryvtt-simple-calendar",
+        "version": "2.1.58",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/foundryvtt-simple-calendar/index.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "FXMaster",
+        "description": "Adds various particle and filter effects",
+        "url": "https://github.com/ghost-fvtt/fxmaster",
+        "version": "3.5.1",
+        "compatibility": {
+          "minimum": "10.278",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/fxmaster/libs/filters/pixi-filters.js"
+        ],
+        "esmodules": [
+          "modules/fxmaster/fxmaster.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Illandril's Inventory Sorter (5e)",
+        "description": "Automatically sorts actors' inventories alphabetically (currently only compatible with the DnD5e system).",
+        "url": "https://github.com/illandril/FoundryVTT-inventory-sorter",
+        "version": "2.0.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "verified": "1.6.3"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/illandril-inventory-sorter/init.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Illandril's Token Quick Actions (5e)",
+        "description": "Shows a \"quick actions\" menu when right-clicking a token, showing the actions available to that token during combat (currently only compatible with the DnD5e system).",
+        "url": "https://github.com/illandril/FoundryVTT-npc-quick-actions",
+        "version": "2.0.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "verified": "1.6.3"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/illandril-npc-quick-actions/scripts/index.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Illandril's Token Tooltips",
+        "description": "Adds tooltips for tokens for any system. Some, but not all, systems have some values pre-configured for the tooltip, but custom tooltip values can be configured for any system. The DnD5e system has the most built-in support, but other modules (including Pathfinder 1 and 2, D&amp;D 3.5, and more) have some values configured to show out-of-the-box.",
+        "url": "https://github.com/illandril/FoundryVTT-token-tooltips",
+        "version": "3.1.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/illandril-token-tooltips/scripts/index.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Initiative Double Click",
+        "description": "Double click the initiative value in the combat tracker to quickly modify it.",
+        "url": "https://github.com/League-of-Foundry-Developers/fvtt-initiative-double-click",
+        "version": "1.6.1",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10.277"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/initiative-double-click/Combat.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Inline Roll Commands",
+        "description": "Inline Roll Commands lets you create buttons, like deferred inline rolls, to perform commands like rolling a skill.",
+        "url": "https://github.com/kaelad02/inline-roll-cmd",
+        "version": "0.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {}
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/inline-roll-cmd/src/inline-roll-cmd.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Item Delete Check",
+        "description": "Add delete confirmation dialog to various sheets",
+        "url": "https://gitlab.com/tposney/item-delete-check/tree/master",
+        "version": "10.0.6",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/item-delete-check/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Item Piles",
+        "description": "This module adds the ability for items to be dropped onto the ground, and then picked up.",
+        "url": "https://github.com/fantasycalendar/FoundryVTT-ItemPiles",
+        "version": "2.2.13",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/item-piles/module.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Item Macro",
+        "description": "A module that allows macros to be stored in items and executed in various places.",
+        "url": "https://github.com/Kekilla0/Item-Macro",
+        "version": "1.8.0",
+        "compatibility": {
+          "minimum": "0.8.0",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/itemacro/scripts/hooks.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Items with Spells DnD5e",
+        "description": "A module that allows spells to be attached to Items, Features, etc.",
+        "url": "https://github.com/ElfFriend-DnD/foundryvtt-items-with-spells-5e",
+        "version": "1.2.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.0"
+              }
+            }
+          ],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {
+                "minimum": "1.12.7.1"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/items-with-spells-5e/scripts/items-with-spells-5e.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "JB2A - Jules and Ben's Animated Assets - Free Content",
+        "description": "<p>Animated Assets for spells, tiles, tokens, melee and ranged attacks</p><p>Troubleshooting and FAQ section on our <a href=\"https://jb2a.com\">website</a> </p><p>Join our <a href=\"https://discord.gg/gmd8MAPX4m\">Discord server</a> for any further questions</p><p> <a href=\"https://www.jb2a.com/Library_Preview/\">Preview</a> our assets<br /></p><p>Consider supporting us on <a href=\"https://www.patreon.com/JB2A\">Patreon</a> for more ! </p>",
+        "url": "https://www.patreon.com/JB2A",
+        "version": "0.5.1",
+        "compatibility": {
+          "minimum": "8",
+          "verified": "10.286"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/JB2A_DnD5e/scripts/jb2a.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Kris's Compendium of Trade Goods",
+        "description": "<i>A D&amp;D 5e repository of trade goods to boost worldbuilding resource distribution to flesh out regions, or for political interest.</i><br />*** Support me on <a href=\"https://patreon.com/KCTG\" title=\"PATREON\">PATREON</a>***<p>*** Join me on <a href=\"https://discord.gg/MYgCWdAc9c\" title=\"Discord\">DISCORD</a>***</p>",
+        "url": "https://www.patreon.com/KCTG",
+        "version": "0.8.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.290",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "pf2e",
+              "type": "system",
+              "compatibility": {}
+            }
+          ],
+          "requires": [
+            {
+              "id": "monks-enhanced-journal",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Less Fog",
+        "description": "This module allows adjustments to the appearance of the FOW.",
+        "url": "https://github.com/trdischat/lessfog",
+        "version": "0.10.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.283"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/lessfog/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "lib Themer",
+        "description": "One stop shop for styling Foundry",
+        "url": "https://github.com/mouse0270/lib-themer",
+        "version": "1.0.6",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/lib-themer/scripts/init.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "libWrapper",
+        "description": "Library for wrapping core Foundry VTT methods, meant to improve compatibility between packages that wrap the same methods.",
+        "url": "https://github.com/ruipin/fvtt-lib-wrapper",
+        "version": "1.12.11.0",
+        "compatibility": {
+          "minimum": "0.6.5",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/lib-wrapper/lib-wrapper.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Melvin's Mechanical Masterworks",
+        "description": "Your one-stop shop for tabletop assets.",
+        "url": "https://www.patreon.com/melvinsmechanicalmasterworks",
+        "version": "2.1.5",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/mels-masterworks/scripts/module.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Midi QOL",
+        "description": "Automates rolling weapon/spell attacks and applying damage",
+        "url": "https://gitlab.com/tposney/midi-qol",
+        "version": "10.0.21",
+        "compatibility": {
+          "minimum": "10.286",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.3"
+              }
+            },
+            {
+              "id": "sw5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.2.2.2.5"
+              }
+            }
+          ],
+          "requires": [
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/midi-qol/src/midi-qol.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Midi SRD",
+        "description": "DnD 5e SRD items, features and spells configured for Dynamic Active Effects and Midi QoL",
+        "url": "https://github.com/thatlonelybugbear/midi-srd",
+        "version": "10.0.6",
+        "compatibility": {
+          "minimum": "10.286",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.1"
+              }
+            }
+          ],
+          "requires": [
+            {
+              "id": "dae",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "midi-qol",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "advanced-macros",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "foundryvtt-simple-calendar",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "times-up",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "warpgate",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/midi-srd/scripts/MidiSRD-macros.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Minimal UI",
+        "description": "Minimal UI allows customizing Foundry interface, by hiding, collapsing or resizing specific parts.",
+        "url": "https://github.com/saif-ellafi/foundryvtt-minimal-ui.git",
+        "version": "1.5.4",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.284",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "colorsettings",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/minimal-ui/minimalui.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Module Management+",
+        "description": "Is packed with features and design improvements designed to make managing large module list easy. MM+ provides more detailed information about modules at a glance and allows you to read packages changelogs/readmes directly in foundry meant to help you find answers quickly. Some of the notable features of Module Management+ is the Addition of new tags such as readme, changelog, issues and authors. A cleaner easier list view of the modules with stripped rows and more spacing to make the viewing experiance easier on the eyes. The ability to see conflicts and known issues with your installed modules.",
+        "url": "https://github.com/mouse0270/module-credits",
+        "version": "2.1.5",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [
+            {
+              "id": "tidy-ui_game-settings",
+              "type": "module",
+              "manifest": "https://raw.githubusercontent.com/sdenec/tidy-ui_game-settings/master/module.json",
+              "compatibility": {},
+              "reason": "Tidy UI and MM+ perform many of the same functions. MM+ will not be fixing compatibility issues between the two modules."
+            },
+            {
+              "id": "lib-changelogs",
+              "type": "module",
+              "manifest": "https://github.com/theripper93/libChangelogs/blob/master/module.json",
+              "compatibility": {
+                "minimum": "0.7.7"
+              },
+              "reason": "Changelog & Conflicts is deprecated and the author recommends you use Module Management+ instead."
+            }
+          ],
+          "flags": {
+            "optional": [
+              {
+                "id": "lib-wrapper",
+                "type": "module",
+                "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json",
+                "reason": "Provides a compatibility layer for checking if other Modules are overriding similar functionality.",
+                "compatibility": {}
+              },
+              {
+                "id": "lib-themer",
+                "type": "module",
+                "manifest": "https://github.com/mouse0270/lib-themer/releases/latest/download/module.json",
+                "reason": "Provides the ability to apply optional styles for a more modern and clean look.",
+                "compatibility": {}
+              }
+            ]
+          }
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/module-credits/scripts/init.mjs"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Monaco Macro Editor",
+        "description": "Replaces the inbuilt macro editor with the Monaco Editor (same editor as VS Code). Includes type hinting.",
+        "url": "https://github.com/laquasicinque/monaco-macro-editor",
+        "version": "0.0.8",
+        "compatibility": {
+          "minimum": "0.8.5",
+          "verified": "0.8.9"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/monaco-macro-editor/dist/module.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Monk's Active Tile Triggers",
+        "description": "Want to teleport, or open doors, or hide characters, or display a message, or play a sound, or change a token's elevation when a token walks over a tile... now you can",
+        "url": "https://github.com/ironmonk88/monks-active-tiles",
+        "version": "10.7",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/monks-active-tiles/js/jquery.typeahead.min.js"
+        ],
+        "esmodules": [
+          "modules/monks-active-tiles/monks-active-tiles.js",
+          "modules/monks-active-tiles/settings.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Monk's Hotbar Expansion",
+        "description": "Click to show all rows of the Hotbar, so that you can select the row by sight rather than clicking through pages.  Drag and Drop on any of the rows, and clear an entire row if needed.",
+        "url": "https://github.com/ironmonk88/hotbar-expansion",
+        "version": "10.1",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/monks-hotbar-expansion/hotbar-expansion.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Monk's Little Details",
+        "description": "Things to tidy up the interface and flow",
+        "url": "https://github.com/ironmonk88/monks-little-details",
+        "version": "10.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/monks-little-details/monks-little-details.js",
+          "modules/monks-little-details/settings.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Monk's Scene Navigation",
+        "description": "Re-organize the scene navigation to show scenes on one line, and to respect the folder structure.  As well as adding some quality of life improvments for navigating scenes.",
+        "url": "https://github.com/ironmonk88/monks-scene-navigation",
+        "version": "10.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/monks-scene-navigation/monks-scene-navigation.js",
+          "modules/monks-scene-navigation/settings.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Monk's TokenBar",
+        "description": "Add a bar with all the current player tokens.  Limit movement, roll saving throws, assign XP.",
+        "url": "https://github.com/ironmonk88/monks-tokenbar",
+        "version": "10.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/monks-tokenbar/js/jquery.typeahead.min.js"
+        ],
+        "esmodules": [
+          "modules/monks-tokenbar/monks-tokenbar.js",
+          "modules/monks-tokenbar/monks-tokenbar-api.js",
+          "modules/monks-tokenbar/apps/tokenbar.js",
+          "modules/monks-tokenbar/apps/savingthrow.js",
+          "modules/monks-tokenbar/apps/assignxp.js",
+          "modules/monks-tokenbar/apps/contestedroll.js",
+          "modules/monks-tokenbar/settings.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Monk's Wall Enhancement",
+        "description": "Enhancements to the Wall Tool.  Drag points together, freehand draw a wall, plus more.",
+        "url": "https://github.com/ironmonk88/monks-wall-enhancement",
+        "version": "10.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/monks-wall-enhancement/monks-wall-enhancement.js",
+          "modules/monks-wall-enhancement/settings.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Mass Edit",
+        "description": "Search and edit multiple placeables at the same time.",
+        "url": "https://github.com/Aedif/multi-token-edit",
+        "version": "1.26.0",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/multi-token-edit/multi-token-edit.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Multiple Document Selection",
+        "description": "Ever wanted to select multiple items in the sidebar directory and move or delete them?",
+        "url": "https://github.com/ironmonk88/multiple-document-selection",
+        "version": "10.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/multiple-document-selection/multiple-document-selection.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Party Overview",
+        "description": "Provides an instant overview about vital stats of the players active in the current scene",
+        "url": "http://github.com/mclemente/party-overview",
+        "version": "2.15.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/party-overview/party-overview.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Per Actor Roll Mode",
+        "description": "A module for Foundry Virtual Tabletop that allows overriding the selected roll mode on a per-actor basis.",
+        "url": "https://github.com/ghost-fvtt/per-actor-roll-mode",
+        "version": "1.2.0",
+        "compatibility": {
+          "minimum": "9.238",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/per-actor-roll-mode/per-actor-roll-mode.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Ownership Viewer",
+        "description": "Quickly see which entities (Journal entries, Actors, etc..) are visible to all players or visible to a specific player.",
+        "url": "https://github.com/Malekal4699/fvtt-module-permission-viewer",
+        "version": "0.10.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/permission_viewer/scripts/ownership_viewer.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Quick Module Enable",
+        "description": "Povide a simple way to quickly enable new modules after installing them. The first login by a GM after installing modules will show a the Module Management dialog with the new modules pre-checked. Just click 'Save' to enable them all. <br /> Also provides additional filters for other common module issues.",
+        "url": "https://gitlab.com/tiwato/quick_module_enable",
+        "version": "1.3.7",
+        "compatibility": {
+          "minimum": "0.8.0",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/quick-module-enable/src/index.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "QuickScale",
+        "description": "A small module for quickly adjusting the scale of things.",
+        "url": "https://github.com/unsoluble/quickscale",
+        "version": "1.6.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/quickscale/scripts/quickscale.js",
+          "modules/quickscale/scripts/nouislider.js",
+          "modules/quickscale/scripts/wNumb.min.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Rarity Colors",
+        "description": "Auto colors inventory items based on visibility",
+        "url": "https://github.com/thatlonelybugbear/rarity-colors",
+        "version": "10.0.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/rarity-colors/scripts/raritycolors.js",
+          "modules/rarity-colors/scripts/settings.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Requestor",
+        "description": "",
+        "url": "https://github.com/krbz999/requestor",
+        "version": "10.0.5.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/requestor/setup.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Rest Recovery for 5E",
+        "description": "Adds 5e long and short rest mechanics and variant rules, such as feats, class features, and hit-dice healing.",
+        "url": "https://github.com/fantasycalendar/FoundryVTT-RestRecovery",
+        "version": "1.3.10",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {}
+            }
+          ],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/rest-recovery/module.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Roof Occlusion Vision And Fade",
+        "description": "A simple module to allow overhead tile occlusion to use both vision and fade",
+        "url": "https://github.com/Gundancer/foundryvtt-roof-occlusion-vision-fade",
+        "version": "1.0.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/roof-occlusion-vision-fade/roof-occlusion-vision-fade.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Rounded Distance for Measured Templates",
+        "description": "Rounds the distance of your measured templates the nearest multiple while you are drawing them. By default it rounds to nearest grid space.",
+        "url": "https://github.com/cdverrett94/FVTT-rounded-distance-for-measured-templates",
+        "version": "1.5.4",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.277"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/rounded-distance-for-measured-templates/scripts/rounded-distance-for-measured-templates.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "routinglib",
+        "description": "A library module to calculate a path between two points",
+        "url": "https://github.com/manuelVo/foundryvtt-routinglib",
+        "version": "1.0.6",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/routinglib/js/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Revised Weapons & Equipment",
+        "description": "Revised descriptions, icons, and balance for various weapons &amp; equipment items.",
+        "url": "https://github.com/M0nk3yy/RWE",
+        "version": "1.3.0",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {}
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Salvage Yard",
+        "description": "Caches deleted documents to prevent catastrophe!",
+        "url": "https://gitlab.com/geekswordsman/salvage-yard",
+        "version": "1.0.5",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/salvage-yard/module/main.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Scene Preview",
+        "description": "Shows the GM a preview image of scenes on mouse hover",
+        "url": "https://github.com/saif-ellafi/foundryvtt-scene-preview.git",
+        "version": "3.1.0",
+        "compatibility": {
+          "minimum": "0.8.3",
+          "verified": "10.284",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/scene-preview/scenepreview.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Compendium Scene Viewer",
+        "description": "Allows scenes in a compendium to be viewed without importing",
+        "url": "https://github.com/BadIdeasBureau/scene-viewer",
+        "version": "1.1.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/scene-viewer/scripts/scene-viewer.js",
+          "modules/scene-viewer/scripts/settings.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Select tool everywhere",
+        "description": "Adds the select tool to all controls(measure templates, lighting and sound) and a patch for journal notes so the select tool works there too. This is a quick and dirty module. You can move multiple light/sounds/templates/journals with this. Thanks to Blitz#6797 the selection does show correctly.  This module checks if a select tool is there before adding it(also thanks to Blitz) and makes sure to only do anything if this module added the select tool, so it should be safe to use with other modules that add a select tool. This will probably be obsolete in the future.",
+        "url": "https://github.com/KayelGee/select-tool-everywhere",
+        "version": "1.4.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/select-tool-everywhere/select-tool-everywhere.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Sequencer",
+        "description": "This module allows you to play effects on the canvas, and create complex sequences of actions",
+        "url": "https://github.com/fantasycalendar/FoundryVTT-Sequencer",
+        "version": "2.3.18",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/sequencer/scripts/module/lib/ext/pixi-filters.js"
+        ],
+        "esmodules": [
+          "modules/sequencer/scripts/module.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Silence Compatibility Warnings",
+        "description": "A simple module that silences compatibility warnings in the browser JavaScript console.",
+        "url": "https://github.com/dor-fvtt-released-modules/silence-compatibility-warnings",
+        "version": "1.0.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/silence-compatibility-warnings/module/silence-compatibility-warnings.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Simbul's Athenaeum",
+        "description": "A library for use by other Simbul modules. Useless by it's own.",
+        "url": "https://github.com/vtt-lair/simbuls-athenaeum",
+        "version": "1.0.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "manifest": "https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/raw/2.0.2/system.json",
+              "compatibility": {
+                "verified": "2.0.2"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Simbul's Creature Aide",
+        "description": "A module that handles Legendary Actions, Lair Actions and Ability Recharges for DnD5e. Originally part of DnD 5e Helpers, split out for v10.",
+        "url": "https://github.com/vtt-lair/simbuls-creature-aide",
+        "version": "1.1.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "manifest": "https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/raw/2.0.2/system.json",
+              "compatibility": {
+                "verified": "2.0.2"
+              }
+            }
+          ],
+          "requires": [
+            {
+              "id": "simbuls-athenaeum",
+              "type": "module",
+              "compatibility": {
+                "verified": "1.0.0"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/simbuls-creature-aide/scripts/creature-aide.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "SmallTime",
+        "description": "A small module for displaying and controlling the current time of day.",
+        "url": "https://github.com/unsoluble/smalltime",
+        "version": "1.15.9",
+        "compatibility": {
+          "minimum": "0.7.9",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/smalltime/scripts/smalltime.js",
+          "modules/smalltime/scripts/draggabilly.min.js"
+        ],
+        "esmodules": [],
+        "socket": true
+      },
+      {
+        "title": "Smart Doors",
+        "description": "Makes doors smarter. Allows doors to synchronize across multiple scenes and sends chat messages when players try to open locked doors.",
+        "url": "https://github.com/manuelVo/foundryvtt-smart-doors",
+        "version": "1.4.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/smart-doors/lib/libwrapper_shim.js",
+          "modules/smart-doors/src/main.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Smart Target",
+        "description": "Enhancements for the targeting feature",
+        "url": "https://github.com/theripper93/Smart-Target",
+        "version": "0.9.7",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/smarttarget/scripts/main.js",
+          "modules/smarttarget/scripts/smartTarget.js",
+          "modules/smarttarget/scripts/helpers.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Sane Magical Item Prices Compendium",
+        "description": "This is an implementation of the Sane Magical Item Prices PDF",
+        "url": "https://gitlab.com/fohswe/smip-compendium",
+        "version": "0.7.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Smol Foundry",
+        "description": "Make your Foundry ... sidebar entities smaller",
+        "url": "https://github.com/thatlonelybugbear/smol-foundry",
+        "version": "10.0.2",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/smol-foundry/scripts/condenser.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "socketlib",
+        "description": "A library for easier handling of foundry sockets",
+        "url": "https://github.com/manuelVo/foundryvtt-socketlib",
+        "version": "1.0.12",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/socketlib/src/libwrapper_shim.js",
+          "modules/socketlib/src/socketlib.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Multiclass Spellbook Filter",
+        "description": "Adds options to organize spells by class. Useful for multiclass characters.",
+        "url": "https://github.com/thatlonelybugbear/spell-class-filter-for-5e",
+        "version": "10.0.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {
+                "minimum": "2.0.1"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/spell-class-filter-for-5e/scf.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Spell Level Buttons for DnD 5e",
+        "description": "Replaces the spell level select dropdown menu with buttons",
+        "url": "https://github.com/Rayuaz/spell-level-buttons-for-dnd5e",
+        "version": "1.03",
+        "compatibility": {},
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/spell-level-buttons-for-dnd5e/scripts/spell_level_buttons.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Stairways (Teleporter)",
+        "description": "Easily create stairways (teleporter) within one scene or between two scenes.",
+        "url": "https://gitlab.com/SWW13/foundryvtt-stairways",
+        "version": "0.9.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.286"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/stairways/src/main.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Tagger",
+        "description": "A global tags manager for easy manipulation of objects of similar types",
+        "url": "https://github.com/fantasycalendar/FoundryVTT-Tagger",
+        "version": "1.3.9",
+        "compatibility": {
+          "minimum": "8.9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/tagger/scripts/module.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Template Macro",
+        "description": "",
+        "url": "https://github.com/krbz999/templatemacro",
+        "version": "10.0.0.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+              "compatibility": {}
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/templatemacro/setup.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "TinyMCE Extended CSS",
+        "description": "Allows for adding new custom classes to the TinyMCE Editor",
+        "url": "https://gitlab.com/geekswordsman/textended",
+        "version": "1.2.2",
+        "compatibility": {
+          "minimum": "0.8.9",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/textended/module/main.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Tidy5e Sheet",
+        "description": "Replaces the default D&amp;D 5e character and NPC sheet with an alternate layout focused on a cleaner UI",
+        "url": "https://github.com/sdenec/tidy5e-sheet",
+        "version": "0.6.6",
+        "compatibility": {
+          "minimum": "10.283",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+              "compatibility": {
+                "minimum": "2.0.0",
+                "verified": "2.0"
+              }
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/tidy5e-sheet/scripts/tidy5e-sheet.js",
+          "modules/tidy5e-sheet/scripts/tidy5e-npc.js",
+          "modules/tidy5e-sheet/scripts/tidy5e-vehicle.js",
+          "modules/tidy5e-sheet/scripts/tidy5e-item.js",
+          "modules/tidy5e-sheet/scripts/app/exhaustion.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Times Up",
+        "description": "Active expiry expiration",
+        "url": "https://gitlab.com/tposney/times-up",
+        "version": "10.0.2",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            },
+            {
+              "id": "socketlib",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/times-up/times-up.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Token Action HUD",
+        "description": "Creates a HUD showing a selected token's common actions.",
+        "url": "https://github.com/Drental/fvtt-tokenactionhud",
+        "version": "3.0.14",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [
+            {
+              "id": "dnd5e",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "dungeonworld",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "pf2e",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "wfrp4e",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "sfrpg",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "sw5e",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "demonlord",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "pf1",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "lancer",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "D35E",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "swade",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "starwarsffg",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "tormenta20",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "blades-in-the-dark",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "symbaroum",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "od6s",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "alienrpg",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "cthack",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "kamigakari",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "tagmar",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "tagmar_rpg",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "ds4",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "coc",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "cof",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "forbidden-lands",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "dnd4e",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "earthdawn4e",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "gurps",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "space1889",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "CoC7",
+              "type": "system",
+              "compatibility": {}
+            },
+            {
+              "id": "cleenmain",
+              "type": "system",
+              "compatibility": {}
+            }
+          ],
+          "requires": [],
+          "conflicts": [],
+          "flags": {
+            "optional": [
+              {
+                "id": "color-picker",
+                "reason": "To set colors within this module's settings. If both modules are enabled, Token Action HUD will use color-picker"
+              },
+              {
+                "id": "colorsettings",
+                "reason": "To set colors within this module's settings. If both modules are enabled, Token Action HUD will use color-picker"
+              }
+            ]
+          }
+        },
+        "scripts": [
+          "modules/token-action-hud/lib/tagify/tagify.min.js",
+          "modules/token-action-hud/scripts/bundle.min.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Token Animation Tools",
+        "description": "Provides macros and configuration options to control Token animations.",
+        "url": "https://github.com/ruipin/fvtt-token-animation-tools",
+        "version": "1.3.1.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/token-animation-tools/token-animation-tools.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Token Attacher",
+        "description": "Attach anything(even tokens) to tokens, so that they move when the token moves and rotate/move when the token rotates. Create prefabs and many more features, see the github readme for more details.",
+        "url": "https://github.com/KayelGee/token-attacher",
+        "version": "4.5.11",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/token-attacher/scripts/token-attacher.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Token Auras",
+        "description": "Provide options for configuring token auras.",
+        "url": "https://bitbucket.org/Fyorl/token-auras",
+        "version": "2.1",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/token-auras/main.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Token Mold",
+        "description": "<p>Gives the option to cast your tokens into a mold of your choosing.</p> <p>Possible options for your mold include:</p> <ul><li>Adding incrementing number suffixes.</li><li>Name generation for tokens.</li><li>Random adjective prefixes. (Examples: angry, calm, bloodthirsty, ...)</li><li>Rolling Hit Points by formula (dnd5e only)</li><li>Set token configuration on placement.</li><li>Providing an overlay to quickly check some stats on token hover.</li><li>Automatic creature size scaling (dnd5e only)</li></ul><hr />",
+        "url": "https://github.com/Moerill/token-mold",
+        "version": "2.15.4",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/token-mold/scripts/index.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Token Variant Art",
+        "description": "Searches a customizable list of directories and displays art variants for tokens/actors through pop-ups and a new Token HUD button. Variants can be individually shared with players allowing them to switch out their token art on the fly.",
+        "url": "https://github.com/Aedif/TokenVariants",
+        "version": "4.7.0",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/token-variants/token-variants.mjs"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Token Z",
+        "description": "Easly manage the Z-Index of tokens",
+        "url": "https://github.com/theripper93/token-z",
+        "version": "0.7.6",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/token-z/scripts/main.js"
+        ],
+        "esmodules": [],
+        "socket": true
+      },
+      {
+        "title": "Alternative Token Visibility",
+        "description": "",
+        "url": "https://github.com/caewok/fvtt-token-visibility",
+        "version": "0.2.1",
+        "compatibility": {
+          "minimum": "10.286",
+          "verified": "10.288"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "manifest": "https://raw.githubusercontent.com/ruipin/fvtt-lib-wrapper/master/module.json",
+              "compatibility": {
+                "verified": "1.12.8"
+              }
+            },
+            {
+              "id": "socketlib",
+              "type": "module",
+              "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json",
+              "compatibility": {
+                "verified": "1.0.12"
+              }
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/tokenvisibility/scripts/module.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "Visual Active Effects",
+        "description": "",
+        "url": "https://github.com/krbz999/visual-active-effects",
+        "version": "10.0.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10.288",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/visual-active-effects/setup.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Tokenizer",
+        "description": "Tiny yet capable in-game token editor",
+        "url": "https://github.com/mrprimate/tokenizer/",
+        "version": "3.9.5",
+        "compatibility": {
+          "minimum": "0.7.9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/vtta-tokenizer/src/index.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Wall Height",
+        "description": "Adds the ability to set wall height for walls so that tokens can look and move over them.",
+        "url": "https://github.com/theripper93/wall-height",
+        "version": "4.8",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/wall-height/scripts/wall-height.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Walled Templates",
+        "description": "",
+        "url": "https://github.com/caewok/fvtt-walled-templates",
+        "version": "0.4.4",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "manifest": "https://raw.githubusercontent.com/ruipin/fvtt-lib-wrapper/master/module.json",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/walledtemplates/scripts/module.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Warp Gate",
+        "description": "Utility module for spawning and modifying tokens.",
+        "url": "https://github.com/trioderegion/warpgate",
+        "version": "1.15.1",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/warpgate/scripts/warpgate.js"
+        ],
+        "socket": true
+      },
+      {
+        "title": "WTF: What the Flag?",
+        "description": "Provides tooltips that indicate which module is adding which option.",
+        "url": "https://github.com/theripper93/what-the-flag",
+        "version": "1.0.3",
+        "compatibility": {
+          "minimum": "10",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/what-the-flag/scripts/main.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      },
+      {
+        "title": "Window Controls",
+        "description": "Improves Minimized window organization, style and adds Maximize and Pin window buttons",
+        "url": "https://github.com/saif-ellafi/foundryvtt-window-controls.git",
+        "version": "1.10.0",
+        "compatibility": {
+          "minimum": "0.8.9",
+          "verified": "10.284",
+          "maximum": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [
+            {
+              "id": "lib-wrapper",
+              "type": "module",
+              "compatibility": {}
+            }
+          ],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/window-controls/windowcontrols.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "World Scripter",
+        "description": "Allow you to write a script in game which executes as if it was a world script.",
+        "url": "https://github.com/Kekilla0/World-Scripter",
+        "version": "0.3.4",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/world-scripter/scripts/hooks.js"
+        ],
+        "socket": false
+      },
+      {
+        "title": "🧙 Developer Mode",
+        "description": "Enables developers to do developer things without affecting non-developers.",
+        "url": "https://github.com/League-of-Foundry-Developers/foundryvtt-devMode",
+        "version": "1.15.4",
+        "compatibility": {
+          "minimum": "9",
+          "verified": "10"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [],
+        "esmodules": [
+          "modules/_dev-mode/foundryvtt-devMode.mjs"
+        ],
+        "socket": false
+      },
+      {
+        "title": "Math.js",
+        "description": "LIBRARY: Math.js - This module is just a dependency for other modules and does not offer any functionality on its own. This module includes the popular Math.js library.",
+        "url": "https://github.com/League-of-Foundry-Developers/mathjs-lib",
+        "version": "7.5.1-fvtt2",
+        "compatibility": {
+          "minimum": "0.0.0",
+          "verified": "1.0.0"
+        },
+        "relationships": {
+          "systems": [],
+          "requires": [],
+          "conflicts": [],
+          "flags": {}
+        },
+        "scripts": [
+          "modules/_mathjs/math.min.js"
+        ],
+        "esmodules": [],
+        "socket": false
+      }
+    ]
+  }
+}
