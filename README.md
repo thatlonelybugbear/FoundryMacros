@@ -1,4 +1,4 @@
-# Buggy bears guide to some of his Foundry Macros.
+# Buggy bear's guide to some of his Foundry Macros.
 
 Mainly I create macros that are MidiQOL driven. 
 
