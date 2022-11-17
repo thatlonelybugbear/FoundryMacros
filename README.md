@@ -13,4 +13,4 @@ For the most part I create and test things under these settings.
 If you have any issues with any macros you find around here, create an issue about it, taking care to:
 1. Mention the Macro version used and what's wrong with it,
 2. Describe steps to reproduce and
-3. Attach your MidiQOL settings.
+3. Attach your MidiQOL settings, if applicable.
