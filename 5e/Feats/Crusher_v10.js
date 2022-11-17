@@ -27,46 +27,40 @@ Once per turn, when you hit a creature with an attack that deals bludgeoning dam
 
 When you score a critical hit that deals bludgeoning damage to a creature, attack rolls against that creature are made with advantage until the start of your next turn.*/
 
-if (args[0].hitTargets < 1) return;
-if (args[0].damageDetail.filter(i=>i.type === "bludgeoning").length < 1) return{};
+if (!args[0].hitTargets || !args[0].damageDetail.some(i=>i.type === "bludgeoning")) return;
 
 const tactor = args[0].hitTargets[0].actor;
 if(args[0].isCritical) await applyTargetGAdvantageEffect()
-
-if (actor.unsetFlag('world', 'CrusherUsed') && !game.combat) {
-	await actor.unsetFlag('world', 'CrusherUsed');
-}
-if (!game.combat) await applyTargetMove();
-
+let combatTime;
 if (game.combat) {
-	const combatTime = `${game.combat.id} - 100*${game.combat.round} + ${game.combat.turn}`
+	combatTime = `${game.combat.id} - 100*${game.combat.round} + ${game.combat.turn}`;
 	const lastTime = actor.getFlag('world', 'CrusherUsed');
-	if (combatTime === lastTime) {
-		MidiQOL.warn("Already used the Crusher feature this turn");
-		return {};
-	}
-    let dialog = new Promise((resolve, reject) => {
-		new Dialog({
-			title: "Crusher's feat move target 5ft",
-			content: "Do you want to move the target 5ft to a direction of your choice?",
-			buttons: {
-				one: {
-					icon: '<i class="fas fa-check"></i>',
-					label: "Yes",
-					callback: () => resolve(true)
-				},
-				two: {
-					icon: '<i class="fas fa-times"></i>',
-					label: "No",
-					callback: () => {resolve(false)}
-				}
-			},
-			default: "two"
-		}).render(true);
-	});
-	let result = await dialog;
-	if(result) { applyTargetMove(combatTime) }
+	if (combatTime === lastTime) return;
 }
+
+let dialog = new Promise((resolve, reject) => {
+	new Dialog({
+		title: "Crusher Feat: move target 5ft",
+		content: "Do you want to move the target 5ft to a direction of your choice?",
+		buttons: {
+			one: {
+				icon: '<i class="fas fa-check"></i>',
+				label: "Yes",
+				callback: () => resolve(true)
+			},
+			two: {
+				icon: '<i class="fas fa-times"></i>',
+				label: "No",
+				callback: () => {resolve(false)}
+			}
+		},
+		default: "two"
+	}).render(true);
+});
+let result = await dialog;
+if(result) applyTargetMove(combatTime);
+else return;
+
 
 async function applyTargetGAdvantageEffect() {
     const effect_sourceData = {
@@ -99,6 +93,7 @@ async function applyTargetMove(time) {
 	       	await warpgate.wait(100);
 	       	ray = new Ray(targetCenter, crosshairs);
            	distance = canvas.grid.measureDistances([{ ray }], { gridSpaces: true })[0]
+			//console.log(ray)
            	if(canvas.grid.isNeighbor(ray.A.x/canvas.grid.w,ray.A.y/canvas.grid.w,ray.B.x/canvas.grid.w,ray.B.y/canvas.grid.w) === false || canvas.scene.tokens.some(i=>i.object.center.x===ray.B.x && i.object.center.y===ray.B.y)) {
                 crosshairs.icon = 'icons/svg/hazard.svg'
 			} 
@@ -112,18 +107,17 @@ async function applyTargetMove(time) {
 	const callbacks = {
             show: checkDistance
 	}
-    let {x,y,cancelled} = await warpgate.crosshairs.show({ size: targetDoc.width, icon: targetDoc.texture.src, label: '0 ft.', interval: -1 }, callbacks);
-    if (distance > 5) {
-        ui.notifications.error(`${name} has a maximum range of ${maxRange} ft. Pick another position`)
-        return cancelled;
+    let distanceCheck = await warpgate.crosshairs.show({ size: targetDoc.width, icon: targetDoc.texture.src, label: '0 ft.', interval: -1 }, callbacks);
+
+    while (canvas.scene.tokens.some(tok=>tok.object.center.x===ray.B.x && tok.object.center.y===ray.B.y || distance > 5)) {
+        ui.notifications.warn(`Crusher Feat: Cannot move ${targetDoc.name} on top of another token or further than 5ft away`);
+        distanceCheck = await warpgate.crosshairs.show({ size: targetDoc.width, icon: targetDoc.texture.src, label: '0 ft.', interval: -1 }, callbacks);
     }
-    if(canvas.scene.tokens.some(tok=>tok.object.center.x===ray.B.x && tok.object.center.y===ray.B.y)) {
-        ui.notifications.error(`Cannot move the ${targetDoc.name} on top of another token`);
-        return cancelled;
-    }
+	const {x,y,cancelled} = distanceCheck;
     if(cancelled) return;
     const newCenter = canvas.grid.getSnappedPosition(x - targetToken.w / 2, y - targetToken.h / 2, 1);
     const mutationData = { token: {x: newCenter.x, y: newCenter.y}};
     await warpgate.mutate(targetDoc, mutationData, {}, {permanent: true});
 	if(game.combat) await actor.setFlag('world', 'CrusherUsed', `${time}`);
+	else if(!game.combat && actor.getFlag('world','CrusherUsed')) await actor.unsetFlag('world','CrusherUsed');
 }
