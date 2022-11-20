@@ -5,7 +5,7 @@ Create a Feature and a DAE on it.
 The DAE should have the following option checked: Transfer to actor on item equip.
 The option is under the Details tab of the DAE.
 
-In the DAE Effects tab create an entry as follows:
+In the DAE Effects tab of the same feature, create an entry as follows:
 flags.midi-qol.onUseMacroName | Custom | ItemMacro.Crusher,postActiveEffects
 
 The name of the feature should match the one in the effect value field. 
