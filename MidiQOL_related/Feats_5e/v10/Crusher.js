@@ -1,4 +1,6 @@
 /******************************************************************\
+Please read this description on how to make it work.
+
 To be used with MidiQOL / DAE / Times-up / Warpgate (/ItemMacro optional)
 
 Create a Feature and a DAE on it.
@@ -17,6 +19,9 @@ If you want to use a macro in your macro folder instead of an ItemMacro just use
 the name of that script macro you created instead of call ItemMacro.
 If named Crusher123 use
 flags.midi-qol.onUseMacroName | Custom | Crusher123,postActiveEffects
+
+Depending on your Warpgate settings, the final step might be asking for the GM
+to accept the mutation, if it is triggered by a player's client. 
 \******************************************************************/
 
           //Actual macro\\
