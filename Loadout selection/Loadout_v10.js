@@ -218,8 +218,8 @@ const mainDialog = await new Promise((resolve, reject) => {
             id:"Loadout"
     })
 });
-console.log(d.data.content)
-console.log(d)
+//console.log(d.data.content)
+//console.log(d)
 
 const results = await mainDialog;
 const weaponMain = results[0];
