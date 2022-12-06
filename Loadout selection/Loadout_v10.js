@@ -12,7 +12,7 @@ if the player wants to use it as such a weapon. Shield is not selectable in this
 \**************************************************************************************************/
 let dualWielderFeatName = "" //You can put here the name of the Dual Wielder feat you use wrapped in"". If empty the macro will try to check for feature names on the actor.
 
-let actor = token?.actor ?? game.user.character;
+actor = token?.actor ?? game.user.character;
 
 if(!actor) {
     ui.notifications.warn(`${game.user.name} please at least select a token to use the Loadout`)
@@ -459,7 +459,7 @@ async function splitWeapon(weaponId, hand) {
         const origWeapon = actor.items.get(weaponId);
         let newWeaponM = origWeapon.toObject();
         newWeaponM.system.quantity = 1;
-        let newWeaponS = origWeapon.system.toObject();
+        let newWeaponS = origWeapon.toObject();
         newWeaponS.system.quantity = 1;
         if (origWeapon.getRollData().item.actionType === "rwak") {
             newWeaponM.system.consume = {
