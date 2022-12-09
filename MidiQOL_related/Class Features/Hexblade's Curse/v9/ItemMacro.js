@@ -55,7 +55,7 @@ else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
 }
 
 else if (lastArg.tag === "onUpdateTarget") { // hp.value was updated on the actor
-    if (lastArg.updates.data.data.attributes.hp.value === 0) {
+    if (lastArg.updates.data.attributes.hp.value === 0) {
         sourceActor = await fromUuid(lastArg.origin?.split(".Item")[0]);
         if (!sourceActor) {
             console.log("error in line 66 of Hexblade ItemMacro")
