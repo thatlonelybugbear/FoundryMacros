@@ -17,7 +17,7 @@ else if(args[0]==="off") { //cleaning when deleting from caster
 }
 
 else if (args[0].tag === "DamageBonus") { //caster hitting for extra damage
-    targetActor = fromUuidSync(lastArg.hitTargetUuids[0])?.actor;
+    targetActor = (await fromUuid(lastArg.hitTargetUuids[0]))?.actor;
     if (targetActor?.flags?.dae?.onUpdateTarget && lastArg.hitTargets.length > 0) {
         const isMarked = targetActor.flags.dae.onUpdateTarget.find(flag => flag.flagName === "Hexblade's Curse" && flag.targetTokenUuid === lastArg.hitTargets[0].uuid);
         if (isMarked) {
@@ -28,7 +28,7 @@ else if (args[0].tag === "DamageBonus") { //caster hitting for extra damage
     return;
 }
 else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
-    targetActor = fromUuidSync(lastArg.hitTargetUuids[0])?.actor;
+    targetActor = (await fromUuid(lastArg.hitTargetUuids[0]))?.actor;
     if (targetActor?.flags?.dae?.onUpdateTarget && lastArg.targets.length > 0) {
         const isMarked = targetActor.flags.dae.onUpdateTarget.find(flag => flag.flagName === "Hexblade's Curse" && flag.sourceTokenUuid === lastArg.tokenUuid);
         if (isMarked) {
@@ -47,7 +47,7 @@ else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
                     "dae": { "specialDuration": [ "1Attack" ] }
             }
         }
-        sourceActor = fromUuidSync(lastArg.tokenUuid).actor;
+        sourceActor = (await fromUuid(lastArg.tokenUuid)).actor;
         await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: sourceActor.uuid, effects: [effectData] });
         }
     }
@@ -56,7 +56,7 @@ else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
 
 else if (lastArg.tag === "onUpdateTarget") { // hp.value was updated on the actor
     if (lastArg.updates.data.data.attributes.hp.value === 0) {
-        sourceActor = fromUuidSync(lastArg.origin?.split(".Item")[0]);
+        sourceActor = await fromUuid(lastArg.origin?.split(".Item")[0]);
         if (!sourceActor) {
             console.log("error in line 66 of Hexblade ItemMacro")
             ui.notification.error("Hexblade Macro issue, let the GM know")
