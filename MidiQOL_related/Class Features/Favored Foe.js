@@ -16,21 +16,7 @@ It will then automatically add the appropriate damage on the first successful hi
 
 \***********************************/
 
-/*
-const isCritical = !args[0].isCritical ? args[0].damageRoll?.options.critical : args[0].isCritical;
-const rollOptions = args[0].damageRoll.options;
 
-const damageBonusResult = new CONFIG.Dice.DamageRoll("1d6+@mod[slashing]", args[0].rollData, {
-    critical: isCritical,
-    criticalBonusDamage: rollOptions.criticalBonusDamage,
-    criticalBonusDice: rollOptions.criticalBonusDice,
-    criticalMultiplier: rollOptions.criticalMultiplier,
-    multiplyNumeric: rollOptions.multiplyNumeric,
-    powerfulCritical: rollOptions.powerfulCritical
-});
-
-return {damageRoll: damageBonusResult.formula, flavor: "Extra boom boom"};
-*/
 
 let diceMult;
 const sourceActor = args[0].actor;
