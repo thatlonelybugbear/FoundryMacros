@@ -108,7 +108,7 @@ if (args[0].tag === "OnUse") {
 } 
 else if (args[0].tag === "DamageBonus") {
     if (!args[0].hitTargets.length) return;
-    if (!["mwak","rwak"].includes(args[0].item.system.actionType)) return {};
+    if (!["mwak","rwak","msak","rsak"].includes(args[0].item.system.actionType)) return {};
     if (targetUuid !== getProperty(sourceActor.flags, "midi-qol.favoredFoe")) return {};
     if (game.combat && combatTime === lastTime) {
         MidiQOL.warn("Favored Foe Damage: Already done this turn");
