@@ -1,3 +1,4 @@
+            // V10 \\
 /***********************************\
 1. Set it up as an ItemMacro or macro onUse on the Favored Foe Item.
 2. Create on the Favored Foe Item a DAE to apply a "Marked" status on the target if you want that to be shown.
