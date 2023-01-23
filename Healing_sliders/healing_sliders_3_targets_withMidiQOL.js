@@ -1,3 +1,8 @@
+// This macro will create a Dialog which lets you choose up to 3 friendly creatures within 30ft of caster (excluding caster) and heal them using a specific HP pool.
+
+//The HP pool can be predefined using the value in the 1st line or be the MidiQOL calculated appliedDamage from the attack, if you use this as an Item onUse macro, After Active Effects on the same attack item.
+
+
 const healingValuePredef = 20; //default healingPool value or use the healingPool value from the MidiQOL damageList as shown below.
 const healingPool = args[0]?.damageList[0]?.appliedDamage ?? healingValuePredef;
 game.sliderHealing = [];
