@@ -7,7 +7,7 @@ main and off-hand.
 - Changes action cost of off hand weapon, as well as damage mods to 5e rules. 
 - Changes the damage to be versatile (must be set as Versatile in the item's details checkbox), 
 if the player wants to use it as such a weapon. Shield is not selectable in this case.
-- Checks if the following items are on the token and respects the corresponding 5e rules:
+- Checks if the following items are on the actor and respects the corresponding 5e rules:
  Dual Wielder, Sharpshooter, "Fighting Style: Dueling", "Fighting Style: Two-Weapon Fighting".
 \**************************************************************************************************/
 let dualWielderFeatName = "" //You can put here the name of the Dual Wielder feat you use wrapped in"". If empty the macro will try to check for feature names on the actor.
