@@ -1,6 +1,6 @@
 /*  HOW TO:
 1. Grab the Mass Cure Wounds from the Spells (SRD) compendium.
-2. Add an onUse macro for either ItemMacro, or macro name, executed After Targeting Complete.
+2. Add an onUse macro for either ItemMacro, or macro name, executed After Targeting Complete and copy-paste this macro.
 3. In the activation condition field add a string including a combination of the following: 
    - "auto": if you want to auto target if less that 4 valid Targets. Choosing "auto" will only affect the Dialog creation if the valid Targets <= 6.
    - "all": if you want to be able to affect all tokens, no matter the disposition.
