@@ -7,11 +7,11 @@ HOW TO
    - "allies": if you want to be able to affect only allied tokens compared to the caster.
    - "enemies": if you want to be able to affect only enemy tokens compared to the caster.
    eg. Activation condition of: "auto allies" will auto target allied tokens if less than 6 available, else a dialog will pop up with the available valid Targets.
+4. Cast the spell.
 
 Keep in mind that:
    - the valid Tokens will be filtered to only show ones with missing HP,
    - there should be at least an option selected in MidiQOL settings about targeting with templates.
-4. Cast the spell.
 
 
 ![image](https://user-images.githubusercontent.com/7237090/217245581-d71dcbb0-8b36-456b-92d3-be9b5144fbd3.png)
