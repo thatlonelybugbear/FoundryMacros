@@ -30,34 +30,23 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
         duration = effect.duration;
         await chooseAbilityTarget(stat,duration);
         let changes = foundry.utils.duplicate(effect.changes);
-        changes[1] = {
-            "key": "flags.world.hexTarget",
-            "value": args[0].hitTargetUuids[0],
-            "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE,
-            "priority": 20
-        }
+        changes[1] = { "key": "flags.world.hexTarget", "value": args[0].hitTargetUuids[0], "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "priority": 20 };
         if (!previousTargetUuid) return await effect.update({changes});
         const previousToken = fromUuidSync(previousTargetUuid);
         if (!previousToken) return await effect.update({changes});
         await token.actor.updateEmbeddedDocuments("ActiveEffect", [{"_id":effect.id, duration, changes}]);
-        const previousEffectId = previousToken.actor.effects.find(eff=>eff.label === args[0].item.name+" Marked")?.id
+        const previousEffectId = previousToken.actor.effects.find(eff=>eff.label === args[0].item.name+" Marked")?.id;
         return await MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: previousToken.actor.uuid, effects: [previousEffectId] });
     }
     const mainDialog = await new Promise((resolve, reject) => {
         let d = new Dialog({
             title: `Hex's disadvantage on ability checks. Choose one.`,
             buttons: Object.entries(CONFIG.DND5E.abilities).map(i=>({label:i[1], callback: (html) => {
-                            results = i[0]
-                            resolve(results)
-                        }}))
-            ,
+                         results = i[0];
+                         resolve(results);
+                     }})),
             default: "Strength"        
-            }).render(true,{
-                width: "auto",
-                height: "auto",
-                resizable: true,
-                id:"Hex"
-        })
+            }).render(true,{width: "auto",height: "auto",resizable: true,id:"Hex"})
     });
     stat = await mainDialog;
     duration = args[0].spellLevel < 3 ? { seconds: 3600, startTime: `${game.time.worldTime}` } : args[0].spellLevel < 5 ? { seconds: 28800, startTime: `${game.time.worldTime}` } : { seconds: 86400, startTime: `${game.time.worldTime}` }
@@ -97,7 +86,6 @@ else if (args[0].macroPass === "preItemRoll") {
         foundry.utils.setProperty(this.config,'consumeSpellSlot', false)
     }
 }
-
 else if (args[0] === "off") {
     const item = fromUuidSync(args.at(-1).origin);
     const markToken = fromUuidSync(args.at(-1).efData.changes[1].value);
@@ -108,13 +96,11 @@ else if (args[0] === "off") {
 
 async function chooseAbilityTarget(stat,duration) {
     const effect_targetData = {
-        changes: [
-            { key: `flags.midi-qol.disadvantage.ability.check.${stat}`, mode: 5, value: 1, priority: 20 },
-            ],
-        origin: args[0].itemUuid, //flag the effect as associated to the spell being cast
-        duration: duration,
-        icon: args[0].item.img,
-        label: args[0].item.name+" Marked"
+        "changes": [{ "key": `flags.midi-qol.disadvantage.ability.check.${stat}`, "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "value": 1, "priority": 20 }],
+        "origin": args[0].itemUuid, //flag the effect as associated to the spell being cast
+        "duration': duration,
+        "icon": args[0].item.img,
+        "label": args[0].item.name+" Marked"
     }
     await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: game.user.targets.first().document.uuid, effects: [effect_targetData] });
 }
