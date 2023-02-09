@@ -6,7 +6,7 @@ If the target drops to 0 hit points before the spell ends, target a new creature
 The duration left will be respected and no more spell slots or uses will be consumed.
 */
 
-if (args[0].macroPass === "DamageBonus") {
+if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#4517 Hex macro
     if (args[0].hitTargets.length > 0) {
         const mark = token.actor.getFlag('world', 'hexTarget');
         if (mark === args[0].hitTargetUuids[0]){
