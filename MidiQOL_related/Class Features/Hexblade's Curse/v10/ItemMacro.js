@@ -1,4 +1,4 @@
-const lastArg = args[args.length - 1];
+const lastArg = args.at(-1);
 let sourceActor;
 let sourceToken;
 let targetActor;
