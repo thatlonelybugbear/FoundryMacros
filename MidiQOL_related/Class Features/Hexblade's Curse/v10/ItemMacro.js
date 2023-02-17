@@ -2,8 +2,8 @@ const lastArg = args.at(-1);
 let sourceActor;
 let sourceToken;
 let targetActor;
-if(lastArg === "on") return;
-else if(lastArg === "off") { //cleaning when deleting from caster
+if(args[0]  === "on") return;
+else if(args[0] === "off") { //cleaning when deleting from caster
     targetActor = canvas.tokens.placeables.find(i=>i.actor.effects.find(eff=>eff.label === "Hexblade's Curse Mark"))?.actor;
     if (targetActor) {
         const hasEffect = targetActor.effects.find(eff=>eff.label === "Hexblade's Curse Mark");
