@@ -2,9 +2,7 @@ const lastArg = args.at(-1);
 let sourceActor;
 let sourceToken;
 let targetActor;
-
 if(args[0]==="on") return;
-
 else if(args[0]==="off") { //cleaning when deleting from caster
     targetActor = canvas.tokens.placeables.find(i=>i.actor.effects.find(eff=>eff.label === "Hexblade's Curse Mark"))?.actor;
     if (targetActor) {
@@ -15,7 +13,6 @@ else if(args[0]==="off") { //cleaning when deleting from caster
     }
     return;
 }
-
 else if (args[0].tag === "DamageBonus") { //caster hitting for extra damage
     targetActor = fromUuidSync(lastArg.hitTargetUuids[0])?.actor;
     if (targetActor?.flags?.dae?.onUpdateTarget && lastArg.hitTargets.length > 0) {
@@ -25,17 +22,18 @@ else if (args[0].tag === "DamageBonus") { //caster hitting for extra damage
             return {damageRoll: `@prof[${damageType}]`, flavor: "Hexblade's Curse damage"};
         }   
     }
-    return;
+    return true;
 }
 else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
     targetActor = fromUuidSync(lastArg.hitTargetUuids[0])?.actor;
     if (targetActor?.flags?.dae?.onUpdateTarget && lastArg.targets.length > 0) {
         const isMarked = targetActor.flags.dae.onUpdateTarget.find(flag => flag.flagName === "Hexblade's Curse" && flag.sourceTokenUuid === lastArg.tokenUuid);
+        console.log(isMarked)
         if (isMarked) {
             const effectData = {
                 "changes":[
-                    { "key": "flags.dnd5e.weaponCriticalThreshold", "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "value": "19", "priority": "20" },
-                    { "key": "flags.dnd5e.spellCriticalThreshold", "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "value": "19", "priority": "20" }                
+                    { "key": "flags.dnd5e.weaponCriticalThreshold", "mode": CONST.ACTIVE_EFFECT_MODES.UPGRADE, "value": "19", "priority": "20" },
+                    { "key": "flags.dnd5e.spellCriticalThreshold", "mode": CONST.ACTIVE_EFFECT_MODES.UPGRADE, "value": "19", "priority": "20" }                
                 ],
                 "duration": {
                     "startTime": game.time.worldTime,
@@ -45,20 +43,18 @@ else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
                 "flags": {
                     "core": { "statusId": "HexBlade Curse - Critical Threshold" },
                     "dae": { "specialDuration": [ "1Attack" ] }
+                },
+                "origin": args[0].item.uuid
             }
-        }
-        sourceActor = fromUuidSync(lastArg.tokenUuid).actor;
-        await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: sourceActor.uuid, effects: [effectData] });
+            await args[0].actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
         }
     }
-    return;
 }
-
 else if (lastArg.tag === "onUpdateTarget") { // hp.value was updated on the actor
     if (lastArg.updates.system.attributes.hp.value === 0) {
         sourceActor = fromUuidSync(lastArg.origin?.split(".Item")[0]);
         if (!sourceActor) {
-            console.log("error in line 66 of Hexblade ItemMacro")
+            console.log("error in line 55 of Hexblade ItemMacro")
             ui.notification.error("Hexblade Macro issue, let the GM know")
         }
         sourceToken = sourceActor?.token ?? sourceActor?.getActiveTokens()[0];
