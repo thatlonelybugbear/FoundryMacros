@@ -2,8 +2,8 @@ const lastArg = args.at(-1);
 let sourceActor;
 let sourceToken;
 let targetActor;
-if(args[0]==="on") return;
-else if(args[0]==="off") { //cleaning when deleting from caster
+if(lastArg === "on") return;
+else if(lastArg === "off") { //cleaning when deleting from caster
     targetActor = canvas.tokens.placeables.find(i=>i.actor.effects.find(eff=>eff.label === "Hexblade's Curse Mark"))?.actor;
     if (targetActor) {
         const hasEffect = targetActor.effects.find(eff=>eff.label === "Hexblade's Curse Mark");
@@ -13,7 +13,7 @@ else if(args[0]==="off") { //cleaning when deleting from caster
     }
     return;
 }
-else if (args[0].tag === "DamageBonus") { //caster hitting for extra damage
+else if (lastArg.tag === "DamageBonus") { //caster hitting for extra damage
     targetActor = fromUuidSync(lastArg.hitTargetUuids[0])?.actor;
     if (targetActor?.flags?.dae?.onUpdateTarget && lastArg.hitTargets.length > 0) {
         const isMarked = targetActor.flags.dae.onUpdateTarget.find(flag => flag.flagName === "Hexblade's Curse" && flag.targetTokenUuid === lastArg.hitTargets[0].uuid);
@@ -24,7 +24,7 @@ else if (args[0].tag === "DamageBonus") { //caster hitting for extra damage
     }
     return true;
 }
-else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
+else if (lastArg.macroPass === "preAttackRoll") { //caster Attacking
     targetActor = fromUuidSync(lastArg.hitTargetUuids[0])?.actor;
     if (targetActor?.flags?.dae?.onUpdateTarget && lastArg.targets.length > 0) {
         const isMarked = targetActor.flags.dae.onUpdateTarget.find(flag => flag.flagName === "Hexblade's Curse" && flag.sourceTokenUuid === lastArg.tokenUuid);
