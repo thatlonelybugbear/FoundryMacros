@@ -28,7 +28,6 @@ else if (args[0].macroPass === "preAttackRoll") { //caster Attacking
     targetActor = fromUuidSync(lastArg.hitTargetUuids[0])?.actor;
     if (targetActor?.flags?.dae?.onUpdateTarget && lastArg.targets.length > 0) {
         const isMarked = targetActor.flags.dae.onUpdateTarget.find(flag => flag.flagName === "Hexblade's Curse" && flag.sourceTokenUuid === lastArg.tokenUuid);
-        console.log(isMarked)
         if (isMarked) {
             const effectData = {
                 "changes":[
@@ -54,7 +53,7 @@ else if (lastArg.tag === "onUpdateTarget") { // hp.value was updated on the acto
     if (lastArg.updates.system.attributes.hp.value === 0) {
         sourceActor = fromUuidSync(lastArg.origin?.split(".Item")[0]);
         if (!sourceActor) {
-            console.log("error in line 55 of Hexblade ItemMacro")
+            console.log("error in line 54 of Hexblade ItemMacro")
             ui.notification.error("Hexblade Macro issue, let the GM know")
         }
         sourceToken = sourceActor?.token ?? sourceActor?.getActiveTokens()[0];
