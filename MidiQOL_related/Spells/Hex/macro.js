@@ -76,14 +76,14 @@ else if (args[0].macroPass === "preItemRoll") {
     const markActor = markToken.actor;
     if (markActor.system.attributes.hp.value !== 0) return;
     else {
-        foundry.utils.setProperty(this.config,'consumeUsage',false)
-        foundry.utils.setProperty(this.config,'needsConfiguration',false)
-        foundry.utils.setProperty(this.options,'configureDialog', false)
-        foundry.utils.setProperty(this.config,'consumeQuantity', false)
-        foundry.utils.setProperty(this.config,'consumeRecharge', false)
-        foundry.utils.setProperty(this.config,'consumeSpellLevel', false)
-        foundry.utils.setProperty(this.config,'consumeResource', false)
-        foundry.utils.setProperty(this.config,'consumeSpellSlot', false)
+        this.options.configureDialog = false;
+        this.config.consumeUsage = false;
+        this.config.needsConfiguration = false;
+        this.config.consumeQuantity = false;
+        this.config.consumeRecharge = false;
+        this.config.consumeSpellLevel = false;
+        this.config.consumeResource = false;
+        this.config.consumeSpellSlot = false;
     }
 }
 else if (args[0] === "off") {
