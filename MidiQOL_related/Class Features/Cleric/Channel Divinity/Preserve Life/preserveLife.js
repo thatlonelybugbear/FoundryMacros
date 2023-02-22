@@ -2,7 +2,7 @@ const healingPool = 5*(args[0].actor.getRollData().classes?.cleric?.levels);
 if (!healingPool) return ui.notifications.warn(`Channel Divinity:Preserve Life - ${args[0].actor.name} is not a Cleric! Talk to GM`) 
 game.sliderHealing = [];
 
-let initialTargets = getValidTargets(token, 1, 30); //needs MidiQOLto get the distances. Can change to another available function for that.
+let initialTargets = getValidTargets(token, 1, 30); //Only Friendly tokens to the Caster.
 let initialContent = initialDialogContent(initialTargets)
 let dialogInitial = await targetingDialog(initialContent, initialTargets, `${healingPool}`)
 
