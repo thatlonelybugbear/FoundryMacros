@@ -98,7 +98,7 @@ async function chooseAbilityTarget(stat,duration) {
     const effect_targetData = {
         "changes": [{ "key": `flags.midi-qol.disadvantage.ability.check.${stat}`, "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "value": 1, "priority": 20 }],
         "origin": args[0].itemUuid, //flag the effect as associated to the spell being cast
-        "duration': duration,
+        "duration": duration,
         "icon": args[0].item.img,
         "label": args[0].item.name+" Marked"
     }
