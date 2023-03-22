@@ -88,7 +88,6 @@ else if (args[0].macroPass === "preItemRoll") {
 }
 else if (args[0] === "off") {
     const item = fromUuidSync(args.at(-1).origin);
-    console.log(item)
     const markToken = fromUuidSync(args.at(-1).efData.changes[1].value);
     const effect = markToken.actor.effects.find(eff=>eff.label === item.name+" Marked");
     if (effect) await MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: markToken.actor.uuid, effects: [effect.id] });
