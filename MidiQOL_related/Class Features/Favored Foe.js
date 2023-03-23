@@ -1,4 +1,4 @@
-            // V10 \\
+// V10 \\
 /***********************************\
 1. Set it up as an ItemMacro or macro onUse on the Favored Foe Item.
 2. Create on the Favored Foe Item a DAE to apply a "Marked" status on the target if you want that to be shown.
@@ -54,10 +54,9 @@ if (args[0].tag === "OnUse") {
         origin: args[0].item.uuid,
 		disabled: false,
         icon: args[0].item.img,
-		label: args[0].item.name
+		label: args[0].item.name,
+        duration: {startTime:game.time.worldTime}
 	}
-	effectData.duration.startTime = game.time.worldTime;
-	
 	await sourceActor.createEmbeddedDocuments("ActiveEffect", [effectData]);
 	
 	if (game.combat && combatTime === lastTime) return;
@@ -86,16 +85,16 @@ if (args[0].tag === "OnUse") {
         buttons: {
             yes: {
                 icon: "<i class='fas fa-check'></i>",
-			    label: "Yes!",
-			    callback: async (html) => {
-			        const dmgType = html[0].querySelector("#dmgType").value;
-			        const isCritical = html[0].querySelector("#crit").checked;
-			        diceMult = isCritical ? 2 : 1;
-			        const roll = await new Roll(`${diceMult}d${baseDamage}`).evaluate({async:true});
-			        await game.dice3d?.showForRoll(roll, game.user, true);
-			        await new MidiQOL.DamageOnlyWorkflow(sourceActor, token.document, roll.total, `${dmgType}`, [target], roll, {flavor: "Favored Foe initial damage", damageList: args[0].damageList, itemCardId: args[0].itemCardId});
-			        if (game.combat) await sourceActor.setFlag('world', 'favoredFoeTime', combatTime);
-			    }
+	   	label: "Yes!",
+	    	callback: async (html) => {
+			const dmgType = html[0].querySelector("#dmgType").value;
+			const isCritical = html[0].querySelector("#crit").checked;
+			diceMult = isCritical ? 2 : 1;
+			const roll = await new Roll(`${diceMult}d${baseDamage}`).evaluate({async:true});
+			await game.dice3d?.showForRoll(roll, game.user, true);
+			await new MidiQOL.DamageOnlyWorkflow(sourceActor, token.document, roll.total, `${dmgType}`, [target], roll, {flavor: "Favored Foe initial damage", damageList: args[0].damageList, itemCardId: args[0].itemCardId});
+			if (game.combat) await sourceActor.setFlag('world', 'favoredFoeTime', combatTime);
+	    	}
             },
             no: {
                 icon: "<i class='fas fa-times'></i>",
@@ -117,8 +116,8 @@ else if (args[0].tag === "DamageBonus") {
     }
     await sourceActor.setFlag('world', 'favoredFoeTime', combatTime);
     const damageFormula = new CONFIG.Dice.DamageRoll(`1d${baseDamage}`, sourceActor.getRollData(), {
-	critical: args[0].isCritical ?? false, 
-   	powerfulCritical: game.settings.get("dnd5e", "criticalDamageMaxDice"),
+		critical: args[0].isCritical ?? false, 
+		powerfulCritical: game.settings.get("dnd5e", "criticalDamageMaxDice"),
     	multiplyNumeric: game.settings.get("dnd5e",  "criticalDamageModifiers")
     }).formula;
     return {damageRoll: damageFormula, flavor: "Favored Foe Damage"};
