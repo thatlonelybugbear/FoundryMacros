@@ -21,7 +21,8 @@ It will then automatically add the appropriate damage on the first successful hi
 
 let diceMult;
 const sourceActor = args[0].actor;
-const rangerLevels = sourceActor.system.classes.ranger?.levels;
+if (!sourceActor) return ui.notifications.error("The Favored Foe macro is to be used via MidiQOL automation and needs the ItemMacro settings for Sheet Hooks NOT checked");
+const rangerLevels = sourceActor.classes.ranger?.system.levels;
 if(!rangerLevels) return ui.notifications.warn(`${token.name} has no Ranger levels! Cannot cast Favored Foe!`)
 const baseDamage = rangerLevels < 6 ? 4 : (rangerLevels < 12 ? 6 : 8);
 const target = args[0].targets[0];
@@ -115,6 +116,10 @@ else if (args[0].tag === "DamageBonus") {
         return {};
     }
     await sourceActor.setFlag('world', 'favoredFoeTime', combatTime);
-    diceMult = args[0].isCritical ? 2 : 1;
-    return {damageRoll: `${diceMult}d${baseDamage}`, flavor: "Favored Foe Damage"};
+    const damageFormula = new CONFIG.Dice.DamageRoll(`1d${baseDamage}`, sourceActor.getRollData(), {
+	critical: args[0].isCritical ?? false, 
+   	powerfulCritical: game.settings.get("dnd5e", "criticalDamageMaxDice"),
+    	multiplyNumeric: game.settings.get("dnd5e",  "criticalDamageModifiers")
+    }).formula;
+    return {damageRoll: damageFormula, flavor: "Favored Foe Damage"};
 }
