@@ -18,8 +18,6 @@ It will then automatically add the appropriate damage on the first successful hi
 \***********************************/
 
 
-
-let diceMult;
 const sourceActor = args[0].actor;
 if (!sourceActor) return ui.notifications.error("The Favored Foe macro is to be used via MidiQOL automation and needs the ItemMacro settings for Sheet Hooks NOT checked");
 const rangerLevels = sourceActor.classes.ranger?.system.levels;
@@ -55,7 +53,7 @@ if (args[0].tag === "OnUse") {
 		disabled: false,
         icon: args[0].item.img,
 		label: args[0].item.name,
-        duration: {startTime:game.time.worldTime}
+        duration: {startTime:game.time.worldTime,seconds:60,rounds:10,turns:1}
 	}
 	await sourceActor.createEmbeddedDocuments("ActiveEffect", [effectData]);
 	
