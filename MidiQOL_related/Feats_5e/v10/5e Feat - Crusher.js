@@ -37,7 +37,7 @@ if (game.combat) {
 	if (combatTime === lastTime) return;
 }
 
-let dialog = new Promise((resolve, reject) => {
+const dialog = new Promise((resolve, reject) => {
 	new Dialog({
 		title: "Crusher Feat: move target 5ft",
 		content: "Do you want to move the target 5ft to a direction of your choice?",
@@ -56,7 +56,7 @@ let dialog = new Promise((resolve, reject) => {
 		default: "two"
 	}).render(true);
 });
-let result = await dialog;
+const result = await dialog;
 if(result) applyTargetMove(combatTime);
 else return;
 
@@ -73,7 +73,7 @@ async function applyTargetGAdvantageEffect() {
 	    flags: {dae: {specialDuration: ['turnStartSource']}},
     }
     if (tactor.effects.find(i=>i.label==="Crusher feat - Grant Advantage on all attacks")) {
-        let effect = tactor.effects.find(i=>i.label==="Crusher feat - Grant Advantage on all attacks");
+        const effect = tactor.effects.find(i=>i.label==="Crusher feat - Grant Advantage on all attacks");
         await MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: args[0].hitTargetUuids[0], effects: [effect.id] });
     }
     await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: args[0].hitTargetUuids[0], effects: [effect_sourceData] });
@@ -111,8 +111,8 @@ async function applyTargetMove(time) {
     while (canvas.scene.tokens.some(tok=>tok !== targetToken && tok.object.center.x===ray.B.x && tok.object.center.y===ray.B.y || distance > 5)) {
         ui.notifications.warn(`Crusher Feat: Cannot move ${targetDoc.name} on top of another token or further than 5ft away`);
         distanceCheck = await warpgate.crosshairs.show({ size: targetDoc.width, icon: targetDoc.texture.src, label: '0 ft.', interval: -1 }, callbacks);
-	let {cancelled} = distanceCheck;
-	if (cancelled) return;
+		let {cancelled} = distanceCheck;
+		if (cancelled) return;
     }
     const {x,y,cancelled} = distanceCheck;
     if(cancelled) return;
