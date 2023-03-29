@@ -92,7 +92,6 @@ async function applyTargetMove(time) {
 	       	await warpgate.wait(100);
 	       	ray = new Ray(targetCenter, crosshairs);
            	distance = canvas.grid.measureDistances([{ ray }], { gridSpaces: true })[0]
-			//console.log(ray)
            	if(canvas.grid.isNeighbor(ray.A.x/canvas.grid.w,ray.A.y/canvas.grid.w,ray.B.x/canvas.grid.w,ray.B.y/canvas.grid.w) === false || canvas.scene.tokens.some(i=>i.object.center.x===ray.B.x && i.object.center.y===ray.B.y)) {
                 crosshairs.icon = 'icons/svg/hazard.svg'
 			} 
