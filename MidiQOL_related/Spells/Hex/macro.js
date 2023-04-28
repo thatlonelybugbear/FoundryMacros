@@ -63,7 +63,7 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
         "duration": duration,
         "origin": args[0].item.uuid
     }
-    const concentrationEffect = token.actor.effects.find(e => e.label === "Concentrating");
+    const concentrationEffect = MidiQOL.getConcentrationEffect(token.actor);
     await token.actor.updateEmbeddedDocuments("ActiveEffect", [{"_id":concentrationEffect.id, duration}]);
     await token.actor.items.getName(args[0].item.name)?.update({"system.components.concentration":false})
     return await token.actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
