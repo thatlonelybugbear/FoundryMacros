@@ -8,12 +8,7 @@ The DAE should have the following option checked: Transfer to actor on item equi
 The option is under the Details tab of the DAE.
 
 In the DAE Effects tab of the same feature, create an entry as follows:
-flags.midi-qol.onUseMacroName | Custom | ItemMacro.Crusher,postActiveEffects
-
-The name of the feature should match the one in the effect value field. 
-If named for example CrusherISDABOMB 
-then the field should be 
-ItemMacro.CrusherISDABOMB,postActiveEffects
+flags.midi-qol.onUseMacroName | Custom | ItemMacro,postActiveEffects
 
 If you want to use a macro in your macro folder instead of an ItemMacro just use 
 the name of that script macro you created instead of call ItemMacro.
