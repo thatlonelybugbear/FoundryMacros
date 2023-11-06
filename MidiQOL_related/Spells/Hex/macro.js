@@ -21,7 +21,7 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
     return {};
 } else if (args[0].macroPass === "postActiveEffects"){
     if (!args[0].hitTargetUuids.length) return ui.notifications.warn("Please select a bugbear!")
-    const effect = token.actor.effects.find(e => e.label === `${args[0].item.name}`);
+    const effect = token.actor.effects.getName(item.name);
     let stat;
     let duration;
     if (effect) {
@@ -35,7 +35,7 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
         const previousToken = fromUuidSync(previousTargetUuid);
         if (!previousToken) return await effect.update({changes});
         await token.actor.updateEmbeddedDocuments("ActiveEffect", [{"_id":effect.id, duration, changes}]);
-        const previousEffectId = previousToken.actor.effects.find(eff=>eff.label === args[0].item.name+" Marked")?.id;
+        const previousEffectId = previousToken.actor.effects.find(eff=>eff.name === item.name+" Marked")?.id;
         return await MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: previousToken.actor.uuid, effects: [previousEffectId] });
     }
     const mainDialog = await new Promise((resolve, reject) => {
@@ -52,20 +52,20 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
     duration = args[0].spellLevel < 3 ? { seconds: 3600, startTime: `${game.time.worldTime}` } : args[0].spellLevel < 5 ? { seconds: 28800, startTime: `${game.time.worldTime}` } : { seconds: 86400, startTime: `${game.time.worldTime}` }
     await chooseAbilityTarget(stat,duration);
     const effectData = {
-        "label": `${args[0].item.name}`,
-        "icon": args[0].item.img,
+        "name": item.name,
+        "icon": item.img,
         "changes": [
-            { "key": "flags.dnd5e.DamageBonusMacro", "value": `ItemMacro.${args[0].item.name}`, "mode": CONST.ACTIVE_EFFECT_MODES.CUSTOM, "priority": 20 },
+            { "key": "flags.dnd5e.DamageBonusMacro", "value": `ItemMacro.${item.name}`, "mode": CONST.ACTIVE_EFFECT_MODES.CUSTOM, "priority": 20 },
             { "key": "flags.world.hexTarget", "value": args[0].hitTargetUuids[0], "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "priority": 20 },
             { "key": "flags.world.hexStat", "value": stat, "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "priority": 20 },
             { "key": "macro.itemMacro", "value": "", "mode": CONST.ACTIVE_EFFECT_MODES.CUSTOM, "priority": 20 }
         ],
         "duration": duration,
-        "origin": args[0].item.uuid
+        "origin": item.uuid
     }
     const concentrationEffect = MidiQOL.getConcentrationEffect(token.actor);
     await token.actor.updateEmbeddedDocuments("ActiveEffect", [{"_id":concentrationEffect.id, duration}]);
-    await token.actor.items.getName(args[0].item.name)?.update({"system.components.concentration":false})
+    await token.actor.items.getName(item.name)?.update({"system.components.concentration":false})
     return await token.actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
 }
 else if (args[0].macroPass === "preItemRoll") {
@@ -87,9 +87,9 @@ else if (args[0].macroPass === "preItemRoll") {
     }
 }
 else if (args[0] === "off") {
-    const item = fromUuidSync(args[args.length-1].origin);
-    const markToken = fromUuidSync(args[args.length-1].efData.changes[1].value);
-    const effect = markToken.actor.effects.find(eff=>eff.label === item.name+" Marked");
+    const item = fromUuidSync(lastArgValue.origin);
+    const markToken = fromUuidSync(lastArgValue.efData.changes[1].value);
+    const effect = markToken.actor.effects.find(eff=>eff.name === item.name+" Marked");
     if (effect) await MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: markToken.actor.uuid, effects: [effect.id] });
     await item?.update({"system.components.concentration":true});
 }
@@ -97,10 +97,11 @@ else if (args[0] === "off") {
 async function chooseAbilityTarget(stat,duration) {
     const effect_targetData = {
         "changes": [{ "key": `flags.midi-qol.disadvantage.ability.check.${stat}`, "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "value": 1, "priority": 20 }],
-        "origin": args[0].itemUuid, //flag the effect as associated to the spell being cast
+        "origin": itemUuid, //flag the effect as associated to the spell being cast
         "duration": duration,
-        "icon": args[0].item.img,
-        "label": args[0].item.name+" Marked"
+        "icon": item.img,
+        "name": item.name+" Marked"
     }
-    await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: game.user.targets.first().document.uuid, effects: [effect_targetData] });
+    await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: game.user.targets.first().actor.uuid, effects: [effect_targetData] });
 }
+
