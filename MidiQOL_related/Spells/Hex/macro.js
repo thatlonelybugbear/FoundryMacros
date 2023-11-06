@@ -20,6 +20,7 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
     }
     return {};
 } else if (args[0].macroPass === "postActiveEffects"){
+    console.log(this)
     if (!args[0].hitTargetUuids.length) return ui.notifications.warn("Please select a bugbear!")
     const effect = token.actor.effects.getName(item.name);
     let stat;
@@ -30,7 +31,7 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
         duration = effect.duration;
         await chooseAbilityTarget(stat,duration);
         let changes = foundry.utils.duplicate(effect.changes);
-        changes[1] = { "key": "flags.world.hexTarget", "value": args[0].hitTargetUuids[0], "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "priority": 20 };
+        changes[1].value = args[0].hitTargetUuids[0];
         if (!previousTargetUuid) return await effect.update({changes});
         const previousToken = fromUuidSync(previousTargetUuid);
         if (!previousToken) return await effect.update({changes});
@@ -41,8 +42,8 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
     const mainDialog = await new Promise((resolve, reject) => {
         let d = new Dialog({
             title: `Hex's disadvantage on ability checks. Choose one.`,
-            buttons: Object.entries(CONFIG.DND5E.abilities).map(i=>({label:i[1], callback: (html) => {
-                         results = i[0];
+            buttons: Object.entries(CONFIG.DND5E.abilities).map(i=>({label:i[1].label, callback: (html) => {
+                         results = i[1].abbreviation;
                          resolve(results);
                      }})),
             default: "Strength"        
@@ -76,14 +77,14 @@ else if (args[0].macroPass === "preItemRoll") {
     const markActor = markToken.actor;
     if (markActor.system.attributes.hp.value !== 0) return;
     else {
-        this.options.configureDialog = false;
-        this.config.consumeUsage = false;
-        this.config.needsConfiguration = false;
-        this.config.consumeQuantity = false;
-        this.config.consumeRecharge = false;
-        this.config.consumeSpellLevel = false;
-        this.config.consumeResource = false;
-        this.config.consumeSpellSlot = false;
+        workflow.options.configureDialog = false;
+        workflow.config.consumeUsage = false;
+        workflow.config.needsConfiguration = false;
+        workflow.config.consumeQuantity = false;
+        workflow.config.consumeRecharge = false;
+        workflow.config.consumeSpellLevel = false;
+        workflow.config.consumeResource = false;
+        workflow.config.consumeSpellSlot = false;
     }
 }
 else if (args[0] === "off") {
@@ -97,11 +98,10 @@ else if (args[0] === "off") {
 async function chooseAbilityTarget(stat,duration) {
     const effect_targetData = {
         "changes": [{ "key": `flags.midi-qol.disadvantage.ability.check.${stat}`, "mode": CONST.ACTIVE_EFFECT_MODES.OVERRIDE, "value": 1, "priority": 20 }],
-        "origin": itemUuid, //flag the effect as associated to the spell being cast
+        "origin": item.uuid, //flag the effect as associated to the spell being cast
         "duration": duration,
         "icon": item.img,
         "name": item.name+" Marked"
     }
     await MidiQOL.socket().executeAsGM("createEffects", { actorUuid: game.user.targets.first().actor.uuid, effects: [effect_targetData] });
 }
-
