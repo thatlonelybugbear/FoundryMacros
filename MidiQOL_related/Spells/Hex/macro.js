@@ -37,7 +37,7 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
         if (!previousToken) return await effect.update({changes});
         await token.actor.updateEmbeddedDocuments("ActiveEffect", [{"_id":effect.id, duration, changes}]);
         const previousEffectId = previousToken.actor.effects.find(eff=>eff.name === item.name+" Marked")?.id;
-        return await MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: previousToken.actor.uuid, effects: [previousEffectId] });
+        return MidiQOL.socket().executeAsGM("removeEffects", { actorUuid: previousToken.actor.uuid, effects: [previousEffectId] });
     }
     const mainDialog = await new Promise((resolve, reject) => {
         let d = new Dialog({
@@ -67,7 +67,7 @@ if (args[0].macroPass === "DamageBonus") { //this part is reused from @Wolfe#451
     const concentrationEffect = MidiQOL.getConcentrationEffect(token.actor);
     await token.actor.updateEmbeddedDocuments("ActiveEffect", [{"_id":concentrationEffect.id, duration}]);
     await token.actor.items.getName(item.name)?.update({"system.components.concentration":false})
-    return await token.actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
+    return token.actor.createEmbeddedDocuments("ActiveEffect", [effectData]);
 }
 else if (args[0].macroPass === "preItemRoll") {
     const mark = token.actor.getFlag('world', 'hexTarget');
