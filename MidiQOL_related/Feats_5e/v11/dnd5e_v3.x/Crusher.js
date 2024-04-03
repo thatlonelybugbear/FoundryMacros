@@ -177,10 +177,6 @@ async function applyTargetMove(time) {
 		y - targetToken.h / 2,
 		1
 	);
-	/* No need for a warpgate mutation as MidiQOL has a proper function for this move.
-              const mutationData = { token: {x: newCenter.x, y: newCenter.y}};
-              await warpgate.mutate(targetDoc, mutationData, {}, {permanent: true});
-              */
 	await MidiQOL.moveToken(targetDoc.uuid, newCenter, true);
 	if (game.combat) await actor.setFlag('world', 'CrusherUsed', `${time}`);
 	else if (!game.combat && actor.getFlag('world', 'CrusherUsed'))
